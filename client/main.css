@@ -1,0 +1,65 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold leading-tight text-gray-900;
+  }
+  h2 {
+    @apply text-xl font-bold leading-tight text-gray-800;
+  }
+
+  a {
+    @apply text-blue-500 hover:underline;
+  }
+
+  form {
+    @apply m-3;
+  }
+
+  form > div {
+    @apply my-4;
+  }
+
+  label {
+    @apply text-sm font-light;
+  }
+
+  label:first-child {
+    @apply block;
+  }
+
+  input + label {
+    @apply ml-2 inline;
+  }
+
+  div[required] > label:after {
+    content: "*";
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="datetime-local"],
+  input[type="password"],
+  input[type="email"],
+  select {
+    @apply border py-1 px-3 text-gray-800 w-full;
+  }
+
+  input[type="submit"] {
+    @apply mt-2 py-1 px-3 border rounded-lg
+  }
+
+  .u-nested {
+    @apply border rounded p-2 m-2;
+  }
+
+  .u-show-error {
+    @apply border-red-500 bg-red-200;
+  }
+
+  .u-error-list {
+    @apply p-2 border-red-500 bg-red-200 w-full;
+  }
+}
