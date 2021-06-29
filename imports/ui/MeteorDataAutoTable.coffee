@@ -1,16 +1,14 @@
 import {Mongo} from 'meteor/mongo'
 import React, {useState, useEffect, useRef} from 'react'
 import meteorApply from '/imports/ui/meteorApply'
-import NewDataTable from './NewDataTable'
-import FormModal from './FormModal'
-import AutoEditTable from './AutoEditTable'
-import {Button, Icon, Modal, Table} from 'semantic-ui-react'
+import EditableDataTable from './EditableDataTable'
+# import {Button, Icon, Modal, Table} from 'semantic-ui-react'
 import {useTracker} from 'meteor/react-meteor-data'
 import {toast} from 'react-toastify'
-import {useCurrentUserIsInRole} from '../../helpers/roleChecks'
-import getColumnsToExport from '../../helpers/getColumnsToExport'
+import {useCurrentUserIsInRole} from 'meteor/janmp:sdui-backend'
+import {getColumnsToExport} from 'meteor/janmp:sdui-backend'
 import Papa from 'papaparse'
-import downloadAsFile from '../../helpers/downloadAsFile'
+import {downloadAsFile} from 'meteor/janmp:sdui-backend'
 # import {useDebounce} from '@react-hook/debounce'
 import _ from 'lodash'
 
@@ -229,7 +227,7 @@ export default MeteorDataAutoTable = (props) ->
         console.error error
         toast.error "Fehler (siehe console.log)"
 
-  <AutoEditTable {{
+  <EditableDataTable {{
     name: sourceName,
     listSchemaBridge, formSchemaBridge
     rows, totalRowCount, loadMoreRows, onRowClick,

@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from "react"
-import {Button, Grid, Dimmer, Icon, Input, Loader, Modal} from 'semantic-ui-react'
-import AutoTableAutoField from "./AutoTableAutoField"
+# import {Button, Grid, Dimmer, Icon, Input, Loader, Modal} from 'semantic-ui-react'
+import AutoTableAutoField from "/imports/ui/parts/AutoTableAutoField"
 import {
   Column, defaultTableRowRenderer, Table, CellMeasurer, CellMeasurerCache,
   InfiniteLoader

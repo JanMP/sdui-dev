@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
-import {Button, Icon, Modal} from 'semantic-ui-react'
-import NewDataTable from './NewDataTable'
-import FormModal from './FormModal'
+# import {Button, Icon, Modal} from 'semantic-ui-react'
+import DataTable from './DataTable'
+import FormModal from '/imports/ui/parts/FormModal'
 
 export default AutoEditTable = ({
   name
@@ -93,7 +93,7 @@ export default AutoEditTable = ({
           </Modal.Actions>
         </Modal>
     }
-    <NewDataTable
+    <DataTable
       {{
         name
         schemaBridge: listSchemaBridge,
