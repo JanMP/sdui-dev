@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../packages/sdui-uniforms"
+		},
+		{
+			"path": "../packages/sdui-roles"
 		}
 	],
 	"settings": {

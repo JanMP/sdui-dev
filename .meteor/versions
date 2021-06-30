@@ -37,6 +37,8 @@ id-map@1.1.1
 insecure@1.0.7
 inter-process-messaging@0.1.1
 janmp:sdui-backend@0.0.1
+janmp:sdui-roles@0.0.1
+janmp:sdui-table@0.0.1
 janmp:sdui-uniforms@0.0.1
 juliancwirko:postcss@2.0.6
 launch-screen@1.2.1

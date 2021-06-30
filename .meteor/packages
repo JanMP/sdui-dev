@@ -25,3 +25,5 @@ juliancwirko:postcss
 coffeescript
 janmp:sdui-backend
 janmp:sdui-uniforms
+janmp:sdui-table
+janmp:sdui-roles
