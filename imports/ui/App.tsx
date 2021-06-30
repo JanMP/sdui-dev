@@ -1,11 +1,12 @@
 import React from 'react';
-import MeteorDataAutoTable from 'meteor/janmp:sdui-table';
+import {MeteorDataAutoTable} from 'meteor/janmp:sdui-table';
+// import IconTest from './IconTest'
 import {props} from '/imports/api/AutoTableTest';
 
 console.log({props})
 
 export const App = () => (
-  <div className="p-3 h-full">
-    <MeteorDataAutoTable {...props}/>
-  </div>
+    <div className="h-screen">
+      <MeteorDataAutoTable {...props}/>
+    </div>
 );
