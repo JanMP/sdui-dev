@@ -21,27 +21,6 @@ if Meteor.isServer
         alignment: _.sample ['chaotic', 'neutral', 'lawful']
         bool: _.sample [true, false]
 
-if Meteor.isServer
-  Meteor.publish 'pythonPublication', ->
-    unless Meteor.user()?.username is 'pythonSum'
-      console.error 'user isnt pythonSum???'
-      @ready()
-    else
-      Test.find {pythonSum: $exists: false},
-        sort: b: 1
-        limit: 1
-    
-new ValidatedMethod
-  name: 'setPythonSum'
-  validate:
-    new SimpleSchema
-      id: String
-      pythonSum: Number
-    .validator()
-  run: ({id, pythonSum}) ->
-    console.log 'setPythonSum Methood', {id, pythonSum}
-    Test.update {_id: id}, $set: {pythonSum}, (err, res) -> console.log 'ressult: ',  err, res
-
 
 testSchema = new SimpleSchema
   _id:
@@ -56,9 +35,6 @@ testSchema = new SimpleSchema
     allowedValues: ['chaotic', 'neutral', 'lawful']
   bool:
     type: Boolean
-    optional: true
-  pythonSum:
-    type: Number
     optional: true
 
 listSchema = new SimpleSchema
@@ -85,8 +61,6 @@ listSchema = new SimpleSchema
     AutoTable:
       editable: true
       overflow: true
-  pythonSum:
-    type: Number
   bool:
     type: Boolean
     # AutoTable:

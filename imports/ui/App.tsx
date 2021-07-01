@@ -6,7 +6,7 @@ import {props} from '/imports/api/AutoTableTest';
 console.log({props})
 
 export const App = () => (
-    <div style={{height: '30rem'}}>
+    <div style={{height: '40rem'}}>
       <MeteorDataAutoTable {...props}/>
     </div>
 );
