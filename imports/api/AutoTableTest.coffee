@@ -20,12 +20,7 @@ if Meteor.isServer
         name: "Test #{n}"
         alignment: _.sample ['chaotic', 'neutral', 'lawful']
         bool: _.sample [true, false]
-<<<<<<< Updated upstream
 
-
-=======
-    
->>>>>>> Stashed changes
 testSchema = new SimpleSchema
   _id:
     type: String
