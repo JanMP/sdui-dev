@@ -6,7 +6,7 @@ import {createAutoDataTableBackend} from 'meteor/janmp:sdui-backend'
 
 import _ from 'lodash'
 
-SimpleSchema.extendOptions ['AutoTable', 'uniforms']
+SimpleSchema.extendOptions ['autotable', 'uniforms']
 
 export Test = new Mongo.Collection 'test'
 
@@ -20,8 +20,12 @@ if Meteor.isServer
         name: "Test #{n}"
         alignment: _.sample ['chaotic', 'neutral', 'lawful']
         bool: _.sample [true, false]
+<<<<<<< Updated upstream
 
 
+=======
+    
+>>>>>>> Stashed changes
 testSchema = new SimpleSchema
   _id:
     type: String
@@ -46,11 +50,11 @@ listSchema = new SimpleSchema
   a:
     type: Number
     min: 5
-    # AutoTable:
+    # autotable:
     #   editable: true
   b:
     type: Number
-    # AutoTable:
+    # autotable:
     #   editable: true
   sum:
     type: Number
@@ -58,12 +62,12 @@ listSchema = new SimpleSchema
   alignment:
     type: String
     allowedValues: ['chaotic', 'neutral', 'lawful']
-    AutoTable:
+    autotable:
       editable: true
       overflow: true
   bool:
     type: Boolean
-    # AutoTable:
+    # autotable:
     #   editable: true
 
 getPreSelectPipeline = -> [
