@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import '/imports/api/api'
+import '/imports/ui/main'
 import '/imports/ui/fixedReactVirtualized'
 import { App } from '/imports/ui/App'
 
