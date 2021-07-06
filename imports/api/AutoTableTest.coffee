@@ -98,5 +98,6 @@ export props = createAutoDataTableBackend
   canAdd: true
   canDelete: true
   canSearch: true
+  canExport: true
  
 
