@@ -79,7 +79,6 @@ getProcessorPipeline = -> [
     b: 1
     alignment: 1
     bool: 1
-    pythonSum: 1
     sum: $add: ['$a', '$b']
 ]
 
