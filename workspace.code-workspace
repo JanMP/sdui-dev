@@ -14,6 +14,12 @@
 		},
 		{
 			"path": "../packages/sdui-roles"
+		},
+		{
+			"path": "../schema-driven-ui-dev"
+		},
+		{
+			"path": "../packages/schema-driven-ui"
 		}
 	],
 	"settings": {
