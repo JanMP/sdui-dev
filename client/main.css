@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply focus:outline-none
+    @apply focus:outline-none;
   }
 
   h1 {
@@ -51,8 +51,13 @@
     @apply border border-gray-300 rounded py-1 px-3 bg-white text-gray-800 w-full;
   }
 
+  input[type="submit"],
+  button {
+    @apply rounded px-3 py-1;
+  }
+
   input[type="submit"] {
-    @apply rounded px-3 py-2 primary
+    @apply bg-blue-500 text-white;
   }
 
   .u-nested {
@@ -67,17 +72,34 @@
     @apply p-2 border border-red-500 bg-red-200 w-full;
   }
 
-
   .rfs-control-container {
     @apply bg-white px-3 text-gray-800 w-full;
   }
+
+  button.icon-button {
+    @apply rounded-full text-center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .primary {
+    @apply bg-blue-500 text-white;
+  }
+
+  .negative {
+    @apply bg-red-500 text-white;
+  }
+
+  .positive {
+    @apply bg-green-500 text-white;
+  }
+
+  .warn,
+  .danger {
+    @apply bg-yellow-400 text-white
+  }
 }
 
-button {
-  @apply rounded px-3 py-2 bg-gray-300
-}
-
-.primary {
-  @apply bg-blue-500 text-white;
-}
-
+/* div>.rfs-caret-icon {
+  height: 32px;
+} */
