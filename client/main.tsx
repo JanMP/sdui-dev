@@ -12,8 +12,6 @@ import FormTest from '/imports/ui/FormTest'
 import Modal from 'react-modal'
 Modal.setAppElement('#react-target')
 
-Accounts.onResetPasswordLink((token, done) => console.log({token}))
-
 Meteor.startup(() => {
   render(<App />, document.getElementById('react-target'));
 });
