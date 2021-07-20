@@ -4,41 +4,20 @@
 			"path": "."
 		},
 		{
-			"path": "../packages/sdui-backend"
+			"path": "../meteor-packages/sdui-backend"
 		},
 		{
-			"path": "../packages/sdui-table"
+			"path": "../meteor-packages/sdui-table"
 		},
 		{
-			"path": "../packages/sdui-uniforms"
+			"path": "../meteor-packages/sdui-uniforms"
 		},
 		{
-			"path": "../packages/sdui-roles"
+			"path": "../meteor-packages/sdui-roles"
 		},
 		{
-			"path": "../schema-driven-ui-dev"
-		},
-		{
-			"path": "../packages/schema-driven-ui"
+			"path": "../meteor-packages/sdui-queryeditor"
 		}
 	],
-	"settings": {
-		"workbench.colorCustomizations": {
-			"activityBar.activeBackground": "#33ff33",
-			"activityBar.activeBorder": "#8080ff",
-			"activityBar.background": "#33ff33",
-			"activityBar.foreground": "#15202b",
-			"activityBar.inactiveForeground": "#15202b99",
-			"activityBarBadge.background": "#8080ff",
-			"activityBarBadge.foreground": "#15202b",
-			"statusBar.background": "#00ff00",
-			"statusBar.foreground": "#15202b",
-			"statusBarItem.hoverBackground": "#00cc00",
-			"titleBar.activeBackground": "#00ff00",
-			"titleBar.activeForeground": "#15202b",
-			"titleBar.inactiveBackground": "#00ff0099",
-			"titleBar.inactiveForeground": "#15202b99"
-		},
-		"peacock.color": "lime"
-	}
+	"settings": {}
 }
