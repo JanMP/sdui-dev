@@ -73,7 +73,15 @@
   }
 
   .rfs-control-container {
-    @apply bg-white px-3 text-gray-800 w-full;
+    @apply bg-white pl-2 text-gray-800 w-full;
+  }
+
+  .rfs-control-container div[role="none"] {
+    display: none !important;
+  }
+
+  .rfs-caret-icon {
+    @apply text-green-500;
   }
 
   button.icon-button {

@@ -22,7 +22,9 @@ schema = new SimpleSchema
       inListField:
         type: String
         allowedValues: ['A', 'B', 'C']
-  subDoc: Object
+  subDoc:
+    type: Object
+    label: 'Subdoc™'
   'subDoc.x': Number
   'subDoc.y': Number
 
