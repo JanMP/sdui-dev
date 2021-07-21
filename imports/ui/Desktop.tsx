@@ -1,37 +1,59 @@
+import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
-import React from 'react';
-import {LoginForm, SetPasswordForm} from 'meteor/janmp:sdui-roles';
+import React, { useState, useEffect } from 'react';
+import { useTracker } from 'meteor/react-meteor-data';
+import { LoginForm, SetPasswordForm } from 'meteor/janmp:sdui-roles';
+import { MeteorDataAutoTable } from 'meteor/janmp:sdui-table';
+import { props } from '/imports/api/AutoTableTest';
+import QueryEditorTest from './QueryEditorTest'
 
 import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
 
 const ResetPasswordPage = () => {
-  let {token} = useParams()
+  let { token } = useParams();
   return (
     <div>
-      <div>{token}</div>
-      <SetPasswordForm token={token}/>
+      <SetPasswordForm token={ token } />
     </div>
-  )
-}
+  );
+};
 
 const Desktop = () => {
+
+  const isLoggedIn = useTracker(() => Meteor.userId() != null)
+
+
+  if (!isLoggedIn) {
+    return (
+      <div>
+        <LoginForm allowResetPassword />
+      </div>
+    );
+  }
+
   return (
     <div className="h-screen flex flex-col">
       <Router>
         <div className="flex-grow overflow-y-auto">
           <Switch>
             <Route path="/reset-password/:token">
-              <ResetPasswordPage/>
+              <ResetPasswordPage />
+            </Route>
+            <Route path="/query-editor">
+              <QueryEditorTest/>
+            </Route>
+            <Route path="/table">
+              <MeteorDataAutoTable {...props}/>
             </Route>
             <Route path="/">
-              <LoginForm allowResetPassword/>
+              <div>Fnord baby! Fnord!</div>
             </Route>
           </Switch>
         </div>
       </Router>
     </div>
-  )
-}
+  );
+};
 
-export default Desktop
+export default Desktop;
 
