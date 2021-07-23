@@ -34,7 +34,7 @@ const Desktop = () => {
   return (
     <div className="h-screen flex flex-col">
       <Router>
-        <div className="flex-grow overflow-y-auto">
+        <div className="flex-grow overflow-y-hidden">
           <Switch>
             <Route path="/reset-password/:token">
               <ResetPasswordPage />
