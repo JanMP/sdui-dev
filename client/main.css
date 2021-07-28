@@ -115,20 +115,19 @@
   /* Toastify styling */
 
   .Toastify__toast--default {
-    background: #fff;
-    color: #aaa;
+    @apply bg-white text-black
   }
   .Toastify__toast--info {
-    background: #3498db;
+    @apply bg-blue-300
   }
   .Toastify__toast--success {
-    background: #97C266;
+    @apply bg-green-300
   }
   .Toastify__toast--warning {
-    background: #f1c40f;
+    @apply bg-yellow-300
   }
   .Toastify__toast--error {
-    background: #DB2828;
+    @apply bg-red-300
   }
 }
 
