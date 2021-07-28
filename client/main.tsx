@@ -4,8 +4,11 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import '/imports/api/api';
+
+import 'react-toastify/dist/ReactToastify.min.css'
+import 'react-virtualized/styles.css';
 import '/imports/ui/main';
-import '/imports/ui/fixedReactVirtualized';
+
 import { App } from '/imports/ui/App';
 // import FormTest from '/imports/ui/FormTest';
 

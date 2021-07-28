@@ -85,11 +85,11 @@
     @apply bg-blue-500 text-white;
   }
 
-  .negative {
+  .cancel, .negative {
     @apply bg-red-500 text-white;
   }
 
-  .positive {
+  .ok, .positive {
     @apply bg-green-500 text-white;
   }
 
@@ -113,7 +113,7 @@
   }
 
   /* Toastify styling */
-  
+
   .Toastify__toast--default {
     background: #fff;
     color: #aaa;
