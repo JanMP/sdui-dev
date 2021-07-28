@@ -18,6 +18,7 @@
     @apply text-blue-500 hover:underline;
   }
 
+  /* forms and form elements */
   form {
     @apply m-3;
   }
@@ -59,19 +60,14 @@
   input[type="submit"] {
     @apply bg-blue-500 text-white;
   }
-
-  .u-nested {
-    @apply border border-gray-100 rounded p-2 m-2;
+  
+  button.icon-button {
+    @apply rounded-full text-center;
+    width: 40px;
+    height: 40px;
   }
 
-  .u-show-error {
-    @apply border border-red-500 bg-red-200;
-  }
-
-  .u-error-list {
-    @apply p-2 border border-red-500 bg-red-200 w-full;
-  }
-
+  /* react functional control */
   .rfs-control-container {
     @apply bg-white pl-2 text-gray-800 w-full;
   }
@@ -81,15 +77,10 @@
   }
 
   .rfs-caret-icon {
-    @apply text-green-500;
+    @apply text-gray-500;
   }
 
-  button.icon-button {
-    @apply rounded-full text-center;
-    width: 40px;
-    height: 40px;
-  }
-
+  /* colors by function */
   .primary {
     @apply bg-blue-500 text-white;
   }
@@ -106,8 +97,38 @@
   .danger {
     @apply bg-yellow-400 text-white
   }
+  
+  /* uniforms specific styles */
+ 
+  .u-nested {
+    @apply border border-gray-100 rounded p-2 m-2;
+  }
+
+  .u-show-error {
+    @apply border border-red-500 bg-red-200;
+  }
+
+  .u-error-list {
+    @apply p-2 border border-red-500 bg-red-200 w-full;
+  }
+
+  /* Toastify styling */
+  
+  .Toastify__toast--default {
+    background: #fff;
+    color: #aaa;
+  }
+  .Toastify__toast--info {
+    background: #3498db;
+  }
+  .Toastify__toast--success {
+    background: #97C266;
+  }
+  .Toastify__toast--warning {
+    background: #f1c40f;
+  }
+  .Toastify__toast--error {
+    background: #DB2828;
+  }
 }
 
-/* div>.rfs-caret-icon {
-  height: 32px;
-} */
