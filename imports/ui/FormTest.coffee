@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {AutoForm} from 'meteor/janmp:sdui-uniforms';
+import {AutoForm} from 'meteor/janmp:sdui-forms';
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
 
