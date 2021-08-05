@@ -1,8 +1,6 @@
 import React from 'react'
 
-import {AutoForm, AutoField} from 'meteor/janmp:sdui-uniforms'
-
-# import { Modal } from 'semantic-ui-react'
+import {AutoForm, AutoField} from 'meteor/janmp:sdui-forms'
 
 
 export default FormModal = ({trigger, schemaBridge, onSubmit, model,

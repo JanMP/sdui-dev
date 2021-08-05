@@ -10,13 +10,16 @@
 			"path": "../meteor-packages/sdui-table"
 		},
 		{
-			"path": "../meteor-packages/sdui-uniforms"
-		},
-		{
 			"path": "../meteor-packages/sdui-roles"
 		},
 		{
 			"path": "../meteor-packages/sdui-queryeditor"
+		},
+		{
+			"path": "../meteor-packages/sdui-forms"
+		},
+		{
+			"path": "../meteor-packages/sdui-rolechecks"
 		}
 	],
 	"settings": {
