@@ -2,12 +2,13 @@ import { Meteor } from 'meteor/meteor';
 // import { Accounts } from 'meteor/accounts-base';
 import React from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
-import { LoginForm, SetPasswordForm } from 'meteor/janmp:sdui-roles';
+import { LoginForm, SetPasswordForm } from 'meteor/janmp:sdui-forms';
 import { MeteorDataAutoTable } from 'meteor/janmp:sdui-table';
 import { props } from '/imports/api/AutoTableTest';
 import QueryEditorTest from './QueryEditorTest'
 
 import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
+import FormTest from './FormTest'
 
 const ResetPasswordPage = () => {
   let { token } = useParams();
