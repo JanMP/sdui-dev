@@ -29,6 +29,6 @@ janmp:sdui-table
 janmp:sdui-roles
 janmp:sdui-queryeditor
 accounts-base@2.0.0
-coagmano:stylus
 accounts-password@2.0.0
 janmp:sdui-rolechecks
+coagmano:stylus
