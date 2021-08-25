@@ -10,9 +10,6 @@
 			"path": "../meteor-packages/sdui-table"
 		},
 		{
-			"path": "../meteor-packages/sdui-roles"
-		},
-		{
 			"path": "../meteor-packages/sdui-queryeditor"
 		},
 		{
@@ -24,22 +21,22 @@
 	],
 	"settings": {
 		"workbench.colorCustomizations": {
-			"activityBar.activeBackground": "#6800b5",
-			"activityBar.activeBorder": "#000000",
-			"activityBar.background": "#6800b5",
-			"activityBar.foreground": "#e7e7e7",
-			"activityBar.inactiveForeground": "#e7e7e799",
-			"activityBarBadge.background": "#000000",
+			"activityBar.activeBackground": "#ffd700",
+			"activityBar.activeBorder": "#009f86",
+			"activityBar.background": "#ffd700",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#009f86",
 			"activityBarBadge.foreground": "#e7e7e7",
-			"statusBar.background": "#4b0082",
-			"statusBar.foreground": "#e7e7e7",
-			"statusBarItem.hoverBackground": "#6800b5",
-			"titleBar.activeBackground": "#4b0082",
-			"titleBar.activeForeground": "#e7e7e7",
-			"titleBar.inactiveBackground": "#4b008299",
-			"titleBar.inactiveForeground": "#e7e7e799"
+			"statusBar.background": "#ccac00",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#998100",
+			"titleBar.activeBackground": "#ccac00",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#ccac0099",
+			"titleBar.inactiveForeground": "#15202b99"
 		},
-		"peacock.color": "indigo",
+		"peacock.color": "#ccac00",
 		"js/ts.implicitProjectConfig.checkJs": true
 	}
 }

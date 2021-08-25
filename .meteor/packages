@@ -26,7 +26,7 @@ coffeescript
 janmp:sdui-backend
 janmp:sdui-forms
 janmp:sdui-table
-janmp:sdui-roles
+# janmp:sdui-roles
 janmp:sdui-queryeditor
 accounts-base@2.0.0
 accounts-password@2.0.0

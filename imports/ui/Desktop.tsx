@@ -6,9 +6,11 @@ import { LoginForm, SetPasswordForm } from 'meteor/janmp:sdui-forms';
 import { MeteorDataAutoTable } from 'meteor/janmp:sdui-table';
 import { props } from '/imports/api/AutoTableTest';
 import QueryEditorTest from './QueryEditorTest'
+import FormTest from './FormTest'
 
 import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
 import FormTest from './FormTest'
+import { faRoute } from '@fortawesome/free-solid-svg-icons'
 
 const ResetPasswordPage = () => {
   let { token } = useParams();
@@ -45,6 +47,9 @@ const Desktop = () => {
             </Route>
             <Route path="/table">
               <MeteorDataAutoTable {...props}/>
+            </Route>
+            <Route path="/form-test">
+              <FormTest />
             </Route>
             <Route path="/">
               <div>Fnord baby! Fnord!</div>
