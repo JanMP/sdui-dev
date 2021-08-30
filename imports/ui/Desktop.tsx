@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 // import { Accounts } from 'meteor/accounts-base';
 import React from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
-import { LoginForm, SetPasswordForm } from 'meteor/janmp:sdui-forms';
+import { LoginForm, SetPasswordForm, MeteorMethodButton } from 'meteor/janmp:sdui-forms';
 import { MeteorDataAutoTable } from 'meteor/janmp:sdui-table';
 import { props } from '/imports/api/AutoTableTest';
 import QueryEditorTest from './QueryEditorTest'
@@ -10,7 +10,7 @@ import FormTest from './FormTest'
 
 import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
 import FormTest from './FormTest'
-import { faRoute } from '@fortawesome/free-solid-svg-icons'
+import { faVial } from '@fortawesome/free-solid-svg-icons'
 
 const ResetPasswordPage = () => {
   let { token } = useParams();
@@ -26,13 +26,13 @@ const Desktop = () => {
   const isLoggedIn = useTracker(() => Meteor.userId() != null)
 
 
-  if (!isLoggedIn) {
-    return (
-      <div>
-        <LoginForm allowResetPassword />
-      </div>
-    );
-  }
+  // if (!isLoggedIn) {
+  //   return (
+  //     <div>
+  //       <LoginForm allowResetPassword />
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="h-screen flex flex-col">
@@ -52,7 +52,17 @@ const Desktop = () => {
               <FormTest />
             </Route>
             <Route path="/">
-              <div>Fnord baby! Fnord!</div>
+              <div className="m-8">
+                <MeteorMethodButton
+                  method="MeteorMethodButtonTest.logTestString"
+                  data={{testString:"Test 123"}}
+                  confirmation="Ehrlich?!"
+                  // label="Test"
+                  icon={faVial}
+                  // buttonClass="primary"
+                  successMsg="Erfolg, Jubel!"
+                />
+              </div>
             </Route>
           </Switch>
         </div>

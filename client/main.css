@@ -51,15 +51,18 @@
   select {
     @apply border border-gray-300 rounded py-1 px-3 bg-white text-gray-800 w-full;
   }
+  input[type="submit"] {
+    @apply rounded px-3 py-1 bg-blue-500 text-white;
+  }
 
-  input[type="submit"],
   button {
     @apply rounded px-3 py-1;
   }
 
-  input[type="submit"] {
-    @apply bg-blue-500 text-white;
+  button.primary {
+    @apply bg-gray-500 text-white
   }
+
   
   button.icon-button {
     @apply rounded-full text-center;
