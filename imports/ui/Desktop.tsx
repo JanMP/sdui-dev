@@ -10,7 +10,7 @@ import FormTest from './FormTest'
 
 import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
 import FormTest from './FormTest'
-import { faVial } from '@fortawesome/free-solid-svg-icons'
+import { faVial } from '@fortawesome/free-solid-svg-icons/faVial'
 
 const ResetPasswordPage = () => {
   let { token } = useParams();
