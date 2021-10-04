@@ -34,7 +34,13 @@
 			"titleBar.activeBackground": "#ccac00",
 			"titleBar.activeForeground": "#15202b",
 			"titleBar.inactiveBackground": "#ccac0099",
-			"titleBar.inactiveForeground": "#15202b99"
+			"titleBar.inactiveForeground": "#15202b99",
+			"editorGroup.border": "#ffd700",
+			"panel.border": "#ffd700",
+			"sash.hoverBorder": "#ffd700",
+			"sideBar.border": "#ffd700",
+			"statusBarItem.remoteBackground": "#ccac00",
+			"statusBarItem.remoteForeground": "#15202b"
 		},
 		"peacock.color": "#ccac00",
 		"js/ts.implicitProjectConfig.checkJs": true

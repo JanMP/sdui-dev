@@ -1,6 +1,5 @@
 import {Meteor} from 'meteor/meteor'
 import {Mongo} from 'meteor/mongo'
-import {ValidatedMethod} from 'meteor/mdg:validated-method'
 import SimpleSchema from 'simpl-schema'
 import {createAutoDataTableBackend} from 'meteor/janmp:sdui-backend'
 
@@ -83,18 +82,16 @@ getProcessorPipeline = -> [
 ]
 
 export props = createAutoDataTableBackend
-  viewTableRole: 'any'
-  editRole: 'any'
   sourceName: 'testList'
   sourceSchema: testSchema
+  collection: Test
   listSchema: listSchema
   formSchema: testSchema
-  collection: Test
-  usePubSub: true
-  useAggregation: true
+  viewTableRole: 'any'
   # getPreSelectPipeline: getPreSelectPipeline
   getProcessorPipeline: getProcessorPipeline
   canEdit: true
+  editRole: 'any'
   canAdd: true
   canDelete: true
   canSearch: true
