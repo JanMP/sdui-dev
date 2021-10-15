@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "../meteor-packages/sdui-rolechecks"
+		},
+		{
+			"path": "../meteor-packages/sdui-contenteditor"
 		}
 	],
 	"settings": {
