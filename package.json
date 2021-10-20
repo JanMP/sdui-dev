@@ -48,21 +48,13 @@
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "postcss-load-config": "^3.1.0",
-    "tailwindcss": "^2.2.2",
     "typescript": "^4.2.2"
-  },
-  "postcss": {
-    "plugins": {
-      "postcss-import": {},
-      "tailwindcss": {},
-      "autoprefixer": {}
-    }
   },
   "meteor": {
     "mainModule": {
-      "client": "client/main.tsx",
-      "server": "server/main.ts"
+      "client": "client/main.coffee",
+      "server": "server/main.coffee"
     },
-    "testModule": "tests/main.ts"
+    "testModule": "tests/main.coffee"
   }
 }
