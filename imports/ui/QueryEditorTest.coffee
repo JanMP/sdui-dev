@@ -35,7 +35,7 @@ listen =
   c:
     A: ['Auto', 'Ameise', 'Amerika']
     B: ['Baumeister', 'Bob', 'Banana']
-    C: ['Chaos', 'Cannabis', 'Chilli']
+    C: ['Chaos', 'Chatbot', 'Chilli']
 
 getList = ({subject,predicate,object}) ->
   console.log {subject,predicate,object}

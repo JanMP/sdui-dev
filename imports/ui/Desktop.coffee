@@ -7,12 +7,22 @@ import {MeteorDataAutoTable} from 'meteor/janmp:sdui-table'
 import {props} from '/imports/api/AutoTableTest'
 import QueryEditorTest from './QueryEditorTest'
 import FormTest from './FormTest'
+import {ContentEditor} from 'meteor/janmp:sdui-contenteditor'
 import TwTest from './TwTest'
 import tw from '/imports/ui/twind'
 
 import {BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom'
 import {faVial} from '@fortawesome/free-solid-svg-icons/faVial'
 
+
+ContentEditorClassNames =
+  wrapper: tw 'h-full bg-red-100 flex flex-col sm:flex-row justify-between'
+  list:
+    wrapper: tw 'border bg-blue-100 flex-grow'
+  editor:
+    wrapper: tw 'border bg-green-100 flex-grow'
+  display:
+    wrapper: tw 'border bg-red-100 flex-grow'
 
 ResetPasswordPage = ->
   {token} = useParams()
@@ -63,6 +73,9 @@ export default ->
                 successMsg="Erfolg, Jubel!"
               />
             </div>
+          </Route>
+          <Route path="/content-editor">
+            <ContentEditor classNames={ContentEditorClassNames}/>
           </Route>
           <Route path="/">
             <TwTest />
