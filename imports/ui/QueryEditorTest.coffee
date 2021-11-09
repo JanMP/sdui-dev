@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {QueryEditor, queryUiObjectToQuery} from 'meteor/janmp:sdui-queryeditor'
+import {QueryEditor, queryUiObjectToQuery} from 'meteor/janmp:sdui'
 import SimpleSchema from 'simpl-schema'
 
 

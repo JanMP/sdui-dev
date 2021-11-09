@@ -1,7 +1,7 @@
 import {Meteor} from 'meteor/meteor'
 import {Mongo} from 'meteor/mongo'
 import SimpleSchema from 'simpl-schema'
-import {createAutoDataTableBackend} from 'meteor/janmp:sdui-backend'
+import {createTableDataAPI} from 'meteor/janmp:sdui'
 
 import _ from 'lodash'
 
@@ -81,7 +81,7 @@ getProcessorPipeline = -> [
     sum: $add: ['$a', '$b']
 ]
 
-export props = createAutoDataTableBackend
+export props = createTableDataAPI
   sourceName: 'testList'
   sourceSchema: testSchema
   collection: Test

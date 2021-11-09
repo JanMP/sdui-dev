@@ -7,7 +7,7 @@ import '/imports/api/api'
 
 import 'react-toastify/dist/ReactToastify.min.css'
 import 'react-virtualized/styles.css'
-import '/imports/ui/main'
+import '/imports/ui/main.styl'
 
 import App from '/imports/ui/App'
 
