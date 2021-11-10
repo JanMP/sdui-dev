@@ -7,27 +7,30 @@ import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
 allowedValues = [1..10].map (i) -> "Option #{i}"
 
 schema = new SimpleSchema
-  Select:
+  select:
     type: String
     allowedValues: allowedValues
-  MultiSelect:
+  multiSelect:
+    label: 'Multiple selections with react-functional-select'
     type: Array
     uniforms:
-      checkbox: true
-  'MultiSelect.$':
+      checkboxes: false
+  'multiSelect.$':
     type: String
     allowedValues: allowedValues
-  Hobbies:
+  hobbies:
     type: Array
     required: true
-  'Hobbies.$':
+  'hobbies.$':
     type: Object
-  'Hobbies.$.Name': String
-  'Hobbies.$.Since': Date
+  'hobbies.$.Name': String
+  'hobbies.$.Since': Date
 
 freshModel =
-  Select: 'Option 1'
-  MultiSelect: ['Option 1', 'Option 2']
+  select: 'Option 1'
+  multiSelect: ['Option 1', 'Option 2']
+  hobbies: [
+  ]
 
 schemaBridge = new SimpleSchema2Bridge schema
 

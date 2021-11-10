@@ -22,7 +22,7 @@ options =
     '*': apply 'focus:outline-none'
     h1: apply 'text-2xl font-bold leading-tight text-gray-900'
     h2: apply 'text-xl font-bold leading-tight text-gray-800'
-    a: apply 'text-green-500 no-underline hover:underline'
+    a: apply 'text-blue-500 no-underline hover:underline'
     form: apply 'm-3'
     'form > div': apply 'my-4'
     label: apply 'text-sm font-light first-child:block'

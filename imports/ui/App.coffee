@@ -1,6 +1,6 @@
 import React from 'react'
 import {ToastContainer} from 'react-toastify'
-import Desktop from './Desktop'
+import Desktop from './Desktop.coffee'
 
 
 export default ->
