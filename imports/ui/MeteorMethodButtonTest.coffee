@@ -4,8 +4,7 @@ import {faVial} from '@fortawesome/free-solid-svg-icons/faVial'
 
 import tw from '/imports/ui/twind'
 
-export default ->
-
+export MeteorMethodButtonTest = ->
   <div className={tw "m-8"}>
     <MeteorMethodButton
       method="MeteorMethodButtonTest.logTestString"

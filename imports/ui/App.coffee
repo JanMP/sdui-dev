@@ -1,11 +1,11 @@
 import React from 'react'
 import {ToastContainer} from 'react-toastify'
-import Desktop from './Desktop.coffee'
+import {TestLayout} from './TestLayout.coffee'
 
 
 export default ->
   <>
     <ToastContainer />
-    <Desktop />
+    <TestLayout />
   </>
 
