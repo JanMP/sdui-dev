@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {AutoForm} from 'meteor/janmp:sdui';
+import React, {useState} from 'react'
+import {AutoForm} from 'meteor/janmp:sdui'
 import tw from '/imports/ui/twind'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
@@ -34,9 +34,11 @@ freshModel =
 
 schemaBridge = new SimpleSchema2Bridge schema
 
-export default FormTest = ->
+export FormTest = ->
   
   [model, setModel] = useState freshModel
+  
+  
   <div className={tw 'h-screen bg-gray-100'}>
     
     <div className={tw "bg-red-100 border border-gray-300 rounded m-2 p-2"}>
