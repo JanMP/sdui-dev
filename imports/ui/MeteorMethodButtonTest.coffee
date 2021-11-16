@@ -8,7 +8,7 @@ export default ->
 
   <div className={tw "m-8"}>
     <MeteorMethodButton
-      method="MeteorMethodButtonTest.logTestStringx"
+      method="MeteorMethodButtonTest.logTestString"
       data={{testString:"test-string from MeteorMethodButton"}}
       confirmation="Do you really want to do this?"
       label="log test-string"
