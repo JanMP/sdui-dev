@@ -36,7 +36,8 @@
     "styled-components": "^5.3.3",
     "twind": "^0.16.16",
     "uniforms": "^3.6.2",
-    "uniforms-bridge-simple-schema-2": "^3.6.2"
+    "uniforms-bridge-simple-schema-2": "^3.6.2",
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.177",

@@ -1,9 +1,9 @@
 {
   "arrow_spacing": {
-    "level": "warn"
+    "level": "error"
   },
   "braces_spacing": {
-    "level": "ignore",
+    "level": "error",
     "spaces": 0,
     "empty_object_spaces": 0
   },
@@ -85,7 +85,7 @@
     "level": "ignore"
   },
   "no_plusplus": {
-    "level": "ignore"
+    "level": "error"
   },
   "no_private_function_fat_arrows": {
     "level": "warn"
@@ -100,7 +100,7 @@
     "level": "warn"
   },
   "no_throwing_strings": {
-    "level": "error"
+    "level": "warn"
   },
   "no_trailing_semicolons": {
     "level": "error"
@@ -124,7 +124,7 @@
     "doubleNotLevel": "error"
   },
   "space_operators": {
-    "level": "ignore"
+    "level": "warn"
   },
   "spacing_after_comma": {
     "level": "ignore"

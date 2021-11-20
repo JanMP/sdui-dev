@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {AutoForm} from 'meteor/janmp:sdui'
-import tw from '/imports/ui/twind'
+import tw from '/imports/ui/twind.coffee'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
 
@@ -20,7 +20,6 @@ schema = new SimpleSchema
     allowedValues: allowedValues
   hobbies:
     type: Array
-    required: true
   'hobbies.$':
     type: Object
   'hobbies.$.Name': String
