@@ -5,6 +5,6 @@ import {props} from '/imports/api/AutoTableTest.coffee'
 
 
 export AutoTableTest = ->
-  <div className={tw"h-screen pt-4"}>
+  <div className={tw"h-full bg-white pt-4"}>
     <MeteorDataAutoTable {props...}/>
   </div>

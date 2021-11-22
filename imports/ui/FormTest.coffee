@@ -40,7 +40,7 @@ export FormTest = ->
   
   <div className={tw 'h-screen bg-gray-100'}>
     
-    <div className={tw "bg-red-100 border border-gray-300 rounded m-2 p-2"}>
+    <div className={tw "bg-white border border-gray-300 rounded m-2 p-2"}>
       <AutoForm
         schema={schemaBridge}
         model={model}
