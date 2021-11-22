@@ -5,6 +5,7 @@ import {useTracker} from 'meteor/react-meteor-data'
 import {FormTest} from './FormTest.coffee'
 import {MeteorMethodButtonTest} from './MeteorMethodButtonTest.coffee'
 import {AutoTableTest} from './AutoTableTest.coffee'
+import {AutoListTest} from './AutoListTest.coffee'
 import tw from '/imports/ui/twind'
 
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
@@ -22,6 +23,7 @@ Menu = ->
     <Link to="/form">Uniforms</Link>
     <Link to="/button">MeteorMethodButton</Link>
     <Link to="/table">AutoTable</Link>
+    <Link to="/list">AutoList</Link>
   </div>
 
 Fnord = ->
@@ -38,6 +40,7 @@ export TestLayout = ->
           <Route path="/form" element={<FormTest />}/>
           <Route path="/button" element={<MeteorMethodButtonTest/>}/>
           <Route path="/table" element={<AutoTableTest/>}/>
+          <Route path="/list" element={<AutoListTest/>}/>
 
         </Routes>
       </div>

@@ -37,10 +37,11 @@ options =
     '.u-show-error': apply"border border-red-500 bg-red-100"
     '.u-error-list': apply"p-2 bg-red-200 text-white w-full"
     '.Toastify__toast--default': apply"bg-white text-black"
-    '.Toastify__toast--info': apply"bg-blue-300"
-    '.Toastify__toast--success': apply"bg-green-300"
-    '.Toastify__toast--warning': apply"bg-yellow-300"
-    '.Toastify__toast--error': apply"bg-red-300"
+    '.Toastify__toast--info': apply"bg-blue-400 text-white"
+    '.Toastify__toast--success': apply"bg-green-400 text-white"
+    '.Toastify__toast--warning': apply"bg-yellow-400"
+    '.Toastify__toast--error': apply"bg-red-500 text-white"
+    '.error-boundary': apply"bg-red-400 text-white p-4"
     '.fnord': apply"px-1 py-4 bg-blue-100"
   }
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import tw from '/imports/ui/twind.coffee'
-import {MeteorDataAutoTable} from 'meteor/janmp:sdui'
+import {MeteorDataAutoList} from 'meteor/janmp:sdui'
 import {props} from '/imports/api/AutoTableTest.coffee'
 
 
-export AutoTableTest = ->
+export AutoListTest = ->
   <div className={tw"h-screen pt-4"}>
-    <MeteorDataAutoTable {props...}/>
+    <MeteorDataAutoList {props...}/>
   </div>
