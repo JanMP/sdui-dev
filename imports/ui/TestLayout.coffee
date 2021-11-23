@@ -6,7 +6,7 @@ import {FormTest} from './FormTest.coffee'
 import {MeteorMethodButtonTest} from './MeteorMethodButtonTest.coffee'
 import {AutoTableTest} from './AutoTableTest.coffee'
 import {AutoListTest} from './AutoListTest.coffee'
-import tw from '/imports/ui/twind'
+import {tw} from '/imports/ui/twind.coffee'
 
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 

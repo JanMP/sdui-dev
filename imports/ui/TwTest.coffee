@@ -1,5 +1,5 @@
 import React from 'react'
-import tw from '/imports/ui/twind'
+import {tw} from '/imports/ui/twind'
 
 export default ->
   <div className={tw"m-1 p-2 rounded border border-red-300"}>

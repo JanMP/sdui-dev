@@ -13,6 +13,8 @@ options =
       colors:
         primary:
           DEFAULT: 'magenta'
+        secondary:
+          DEFAULT: 'lime'
         danger:
           DEFAULT: 'red'
         ok:
@@ -42,8 +44,8 @@ options =
     '.Toastify__toast--warning': apply"bg-yellow-400"
     '.Toastify__toast--error': apply"bg-red-500 text-white"
     '.error-boundary': apply"bg-red-400 text-white p-4"
-    '.fnord': apply"px-1 py-4 bg-blue-100"
+    '.new-component': apply"m-4 rounded bg-blue-100"
   }
 
-  
-export default create(options).tw
+export twind = create(options)
+export tw = twind.tw
