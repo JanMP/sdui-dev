@@ -6,6 +6,7 @@ import {FormTest} from './FormTest.coffee'
 import {MeteorMethodButtonTest} from './MeteorMethodButtonTest.coffee'
 import {AutoTableTest} from './AutoTableTest.coffee'
 import {AutoListTest} from './AutoListTest.coffee'
+import {MarkdownTest} from './MarkdownTest.coffee'
 import {tw} from '/imports/ui/twind.coffee'
 
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
@@ -19,11 +20,12 @@ import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-rou
 #   )
 
 Menu = ->
-  <div className={tw "py-2 shadow flex justify-start children:ml-2"}>
+  <div className={tw "py-2 shadow flex justify-around"}>
     <Link to="/form">Uniforms</Link>
     <Link to="/button">MeteorMethodButton</Link>
     <Link to="/table">AutoTable</Link>
     <Link to="/list">AutoList</Link>
+    <Link to="/markdown">md</Link>
   </div>
 
 Fnord = ->
@@ -31,19 +33,19 @@ Fnord = ->
 
 export TestLayout = ->
 
-  <div className={tw "h-screen flex flex-col"}>
-    <Router>
-      <div className={tw "flex-grow overflow-y-hidden"}>
-        <Menu/>
-        <Routes>
-          <Route path="/fnord" element={<Fnord />}/>
-          <Route path="/form" element={<FormTest />}/>
-          <Route path="/button" element={<MeteorMethodButtonTest/>}/>
-          <Route path="/table" element={<AutoTableTest/>}/>
-          <Route path="/list" element={<AutoListTest/>}/>
-
-        </Routes>
-      </div>
-    </Router>
-  </div>
+  
+  <Router>
+    <div className={tw"h-screen flex flex-grow flex-col"}>
+      <Menu/>
+      <Routes>
+        <Route path="/fnord" element={<Fnord />}/>
+        <Route path="/form" element={<FormTest />}/>
+        <Route path="/button" element={<MeteorMethodButtonTest/>}/>
+        <Route path="/table" element={<AutoTableTest/>}/>
+        <Route path="/list" element={<AutoListTest/>}/>
+        <Route path="/markdown" element={<MarkdownTest/>}/>
+      </Routes>
+    </div>
+  </Router>
+ 
 

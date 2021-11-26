@@ -18,6 +18,9 @@ schema = new SimpleSchema
   'multiSelect.$':
     type: String
     allowedValues: allowedValues
+  string: String
+  number: Number
+  date: Date
   hobbies:
     type: Array
   'hobbies.$':
@@ -38,9 +41,11 @@ export FormTest = ->
   [model, setModel] = useState freshModel
   
   
-  <div className={tw 'h-screen bg-gray-100'}>
+  <div className={tw 'h-screen bg-gray-100 p-4'}>
+
+    <h1>Test</h1>
     
-    <div className={tw "bg-white border border-gray-300 rounded m-2 p-2"}>
+    <div className={tw "bg-white border shadow-xl border-gray-300 rounded my-4 p-4"}>
       <AutoForm
         schema={schemaBridge}
         model={model}
@@ -48,9 +53,9 @@ export FormTest = ->
       />
     </div>
 
-    <div className={tw "bg-white border border-gray-300 rounded m-2 p-2"}>
+    <div className={tw "bg-white border hover:shadow-lg border-gray-300 rounded p-4"}>
       <button
-        className={tw 'bg-red-500 text-white'}
+        className={tw 'bg-danger! text-white'}
         onClick={-> setModel freshModel}>reset model</button>
       <pre>{JSON.stringify model, null, 2}</pre>
     </div>
