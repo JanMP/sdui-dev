@@ -25,18 +25,18 @@ export ActionButtonTest = ->
       onAction={delayedWin}
       label="delayed Win"
       icon={faVial}
-      buttonClass="primary"
+      buttonClass="ok"
     />
     <ActionButton
       onAction={delayedFail}
       label="delayed Fail"
       icon={faVial}
-      buttonClass="primary"
+      buttonClass={tw"bg-pink-300! w-[8rem] h-[8rem] rounded-full!"}
     />
      <ActionButton
       onAction={delayedWin}
       icon={faVial}
-      buttonClass="primary icon"
+      buttonClass="icon warn"
     />
      <ActionButton
       onAction={delayedWin}
@@ -45,6 +45,6 @@ export ActionButtonTest = ->
     <ActionButton
       onAction={delayedWin}
       label="no Icon"
-      buttonClass={tw"bg-danger-500! text-white"}
+      buttonClass="danger"
     />
   </div>
