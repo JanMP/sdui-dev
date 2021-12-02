@@ -3,7 +3,7 @@ import {Accounts} from 'meteor/accounts-base'
 import React from 'react'
 import {useTracker} from 'meteor/react-meteor-data'
 import {FormTest} from './FormTest.coffee'
-import {MeteorMethodButtonTest} from './MeteorMethodButtonTest.coffee'
+import {ActionButtonTest} from './ActionButtonTest.coffee'
 import {AutoTableTest} from './AutoTableTest.coffee'
 import {AutoListTest} from './AutoListTest.coffee'
 import {MarkdownTest} from './MarkdownTest.coffee'
@@ -22,7 +22,7 @@ import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-rou
 Menu = ->
   <div className={tw "py-2 shadow flex justify-around"}>
     <Link to="/form">Uniforms</Link>
-    <Link to="/button">MeteorMethodButton</Link>
+    <Link to="/button">ActionButton</Link>
     <Link to="/table">AutoTable</Link>
     <Link to="/list">AutoList</Link>
     <Link to="/markdown">md</Link>
@@ -40,7 +40,7 @@ export TestLayout = ->
       <Routes>
         <Route path="/fnord" element={<Fnord />}/>
         <Route path="/form" element={<FormTest />}/>
-        <Route path="/button" element={<MeteorMethodButtonTest/>}/>
+        <Route path="/button" element={<ActionButtonTest/>}/>
         <Route path="/table" element={<AutoTableTest/>}/>
         <Route path="/list" element={<AutoListTest/>}/>
         <Route path="/markdown" element={<MarkdownTest/>}/>

@@ -1,2 +1,2 @@
 import './AutoTableTest'
-import './MeteorMethodButtonTest'
+import './ActionButtonTest'

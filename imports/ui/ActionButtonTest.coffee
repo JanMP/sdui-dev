@@ -1,14 +1,14 @@
 import React from 'react'
-import {MeteorMethodButton} from 'meteor/janmp:sdui'
+import {ActionButton} from 'meteor/janmp:sdui'
 import {faVial} from '@fortawesome/free-solid-svg-icons/faVial'
 
 import {tw} from '/imports/ui/twind'
 
-export MeteorMethodButtonTest = ->
+export ActionButtonTest = ->
   <div className={tw "m-8"}>
-    <MeteorMethodButton
-      method="MeteorMethodButtonTest.logTestString"
-      data={{testString:"test-string from MeteorMethodButton"}}
+    <ActionButton
+      method="ActionButtonTest.logTestString"
+      data={{testString:"test-string from ActionButton"}}
       confirmation="Do you really want to do this?"
       label="log test-string"
       icon={faVial}
