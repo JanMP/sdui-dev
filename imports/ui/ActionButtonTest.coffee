@@ -36,12 +36,11 @@ export ActionButtonTest = ->
      <ActionButton
       onAction={delayedWin}
       icon={faVial}
-      buttonClass="primary"
+      buttonClass="primary icon"
     />
      <ActionButton
       onAction={delayedWin}
       label="no Icon"
-      buttonClass="primary"
     />
     <ActionButton
       onAction={delayedWin}
