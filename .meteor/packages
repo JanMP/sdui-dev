@@ -27,3 +27,4 @@ accounts-password@2.2.0
 coagmano:stylus
 janmp:sdui
 # hot-module-replacement
+session

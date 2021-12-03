@@ -1,23 +1,37 @@
 import React, {useState} from 'react'
-import {MarkdownEditor, MarkdownDisplay, useTw} from 'meteor/janmp:sdui'
+import {MarkdownEditor, MarkdownDisplay, useTw, useSession} from 'meteor/janmp:sdui'
+import {Fill, Custom, AnchorType} from 'react-spaces'
+import {AutoListTest} from './AutoListTest.coffee'
 export MarkdownTest = ->
 
-  [value, setValue] = useState '# Markdown Test'
-  tw=useTw()
+  [value, setValue] = useSession 'markdown', '# Markdown Test'
+  tw = useTw()
 
-  <div className={tw"grid md:grid-cols-2 gap-2 flex-grow overflow-hidden"}>
-    <div className={tw"border h-full md:order-last"}>
-      <MarkdownDisplay
-        markdown={value}
-        contentClass="prose"
-      />
-    </div>
-    <div className={tw"border h-max-full"}>
-      <MarkdownEditor
-        value={value}
-        onChange={setValue}
-        editorWidth={"100%"}
-        editorHeight={"100%"}
-      />
-    </div>
-  </div>
+  <Fill>
+    <Custom
+      anchor={AnchorType.Left}
+      anchorSize={200}
+      resizable={true}>
+      <AutoListTest />
+    </Custom>
+    <Fill>
+      <Custom
+        anchor={AnchorType.Top}
+        anchorSize={200}
+        resizable={true}
+      >
+        <MarkdownDisplay
+          markdown={value}
+          contentClass="prose"
+        />
+      </Custom>
+      <Fill>
+        <MarkdownEditor
+          value={value}
+          onChange={setValue}
+          editorWidth={"100%"}
+          editorHeight={"100%"}
+        />
+      </Fill>
+    </Fill>
+  </Fill>

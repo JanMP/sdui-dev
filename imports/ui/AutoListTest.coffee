@@ -20,9 +20,7 @@ ListItem = ({rowData, index, onDelete, onClick}) ->
 
 # try with customComponents={{}}, {{ListItem}} or {{ListItemContent}}
 export AutoListTest = ->
-  <div className={tw"h-screen pt-4"}>
-    <SdList
-      dataOptions={props}
-      customComponents={{ListItemContent}}
-    />
-  </div>
+  <SdList
+    dataOptions={props}
+    customComponents={{ListItemContent}}
+  />
