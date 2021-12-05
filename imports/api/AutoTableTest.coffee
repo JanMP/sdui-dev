@@ -5,14 +5,13 @@ import {createTableDataAPI} from 'meteor/janmp:sdui'
 
 import _ from 'lodash'
 
-SimpleSchema.extendOptions ['autotable', 'uniforms']
+SimpleSchema.extendOptions ['sdTable', 'uniforms']
 
 export Test = new Mongo.Collection 'test'
 
 if Meteor.isServer
   if Test.find().count() is 0
-    [1..10000]
-    .forEach (n) ->
+    [1..10000].forEach (n) ->
       Test.insert
         a: _.random 1, 100
         b: _.random 1, 1000
@@ -44,11 +43,11 @@ listSchema = new SimpleSchema
   a:
     type: Number
     min: 5
-    # autotable:
+    # sdTable:
     #   editable: true
   b:
     type: Number
-    # autotable:
+    # sdTable:
     #   editable: true
   sum:
     type: Number
@@ -56,12 +55,12 @@ listSchema = new SimpleSchema
   alignment:
     type: String
     allowedValues: ['chaotic', 'neutral', 'lawful']
-    autotable:
+    sdTable:
       editable: true
       overflow: true
   bool:
     type: Boolean
-    # autotable:
+    # sdTable:
     #   editable: true
 
 getPreSelectPipeline = -> [
