@@ -41,7 +41,7 @@ export FormTest = ->
   [model, setModel] = useState freshModel
   
   
-  <div className={tw 'h-screen bg-gray-100 p-4'}>
+  <div className={tw 'h-screen bg-gray-100 p-4 overflow-y-scroll'}>
 
     <h1>Test</h1>
     
