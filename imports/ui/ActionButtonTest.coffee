@@ -26,6 +26,7 @@ export ActionButtonTest = ->
       label="delayed Win"
       icon={faVial}
       buttonClass="ok"
+      successMsg="Yeah baby, yeah!"
     />
     <ActionButton
       onAction={delayedFail}
