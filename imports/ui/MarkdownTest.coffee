@@ -9,29 +9,21 @@ export MarkdownTest = ->
 
   <Fill>
     <Custom
-      anchor={AnchorType.Left}
+      anchor={AnchorType.Top}
       anchorSize={200}
-      resizable={true}>
-      <AutoListTest />
+      resizable={true}
+    >
+      <MarkdownDisplay
+        markdown={value}
+        contentClass="prose"
+      />
     </Custom>
     <Fill>
-      <Custom
-        anchor={AnchorType.Top}
-        anchorSize={200}
-        resizable={true}
-      >
-        <MarkdownDisplay
-          markdown={value}
-          contentClass="prose"
-        />
-      </Custom>
-      <Fill>
-        <MarkdownEditor
-          value={value}
-          onChange={setValue}
-          editorWidth={"100%"}
-          editorHeight={"100%"}
-        />
-      </Fill>
+      <MarkdownEditor
+        value={value}
+        onChange={setValue}
+        editorWidth={"100%"}
+        editorHeight={"100%"}
+      />
     </Fill>
   </Fill>
