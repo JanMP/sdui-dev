@@ -9,7 +9,7 @@ import {AutoTableTest} from './AutoTableTest.coffee'
 import {AutoListTest} from './AutoListTest.coffee'
 import {MarkdownTest} from './MarkdownTest.coffee'
 import {ContentEditorTest} from './ContentEditorTest.coffee'
-import {tw} from '/imports/ui/twind.coffee'
+import {useTw} from 'meteor/janmp:sdui'
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 
 # ResetPasswordPage = ->
@@ -21,6 +21,9 @@ import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-rou
 #   )
 
 Menu = ->
+
+  tw = useTw()
+
   <div className={tw"p-2 shadow flex justify-around"}>
     <Link to="/form">Uniforms</Link>
     <Link to="/button">ActionButton</Link>
@@ -30,12 +33,15 @@ Menu = ->
     <Link to="/content-editor">ContentEditor</Link>
   </div>
 
+
 Fnord = ->
+  tw = useTw()
+
   <div className={tw"bg-green-100 p-4"}>Fnord</div>
+
 
 export TestLayout = ->
 
-  
   <Router>
     <ViewPort>
       <Top size={45}><Menu/></Top>

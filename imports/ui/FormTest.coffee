@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-import {AutoForm} from 'meteor/janmp:sdui'
-import {tw} from '/imports/ui/twind.coffee'
+import {AutoForm, useTw} from 'meteor/janmp:sdui'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
 
@@ -36,8 +35,10 @@ freshModel =
 
 schemaBridge = new SimpleSchema2Bridge schema
 
+
 export FormTest = ->
-  
+
+  tw = useTw()
   [model, setModel] = useState freshModel
   
   

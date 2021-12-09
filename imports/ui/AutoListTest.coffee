@@ -1,15 +1,20 @@
 import React from 'react'
-import {tw} from '/imports/ui/twind.coffee'
-import {SdList} from 'meteor/janmp:sdui'
+import {SdList, useTw} from 'meteor/janmp:sdui'
 import {props} from '/imports/api/AutoTableTest.coffee'
 
 ListItemContent = ({rowData}) ->
+
+  tw = useTw()
+
   <div className={tw"p-2"}>
     <div className={tw"text-lg font-bold"}>{rowData?.name}</div>
     <span className={tw"text-sm"}>Summe: {rowData?.sum}</span>
   </div>
 
 ListItem = ({rowData, index, onDelete, onClick}) ->
+
+  tw = useTw()
+
   <div className={tw"p-2"}>
     <div className={tw "p-2", if index%%2 is 0 then "bg-blue-100"}>
       <div>{JSON.stringify(rowData)}</div>

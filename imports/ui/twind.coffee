@@ -55,5 +55,6 @@ options =
     #   h1: apply"text-red-400 text-3xl"
     }
 
-export twind = create(options)
+
+export twind = create options
 export tw = twind.tw

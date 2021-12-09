@@ -1,7 +1,6 @@
 import React from 'react'
-import {ActionButton} from 'meteor/janmp:sdui'
+import {ActionButton, useTw} from 'meteor/janmp:sdui'
 import {faVial} from '@fortawesome/free-solid-svg-icons/faVial'
-import {tw} from './twind.coffee'
 
 
 delay = (ms) -> new Promise (resolve) -> setTimeout resolve, ms
@@ -10,6 +9,8 @@ delayedWin = -> delay(2000).then -> 'Yeah baby, Yeah!'
 delayedFail = -> delay(2000).then -> throw new Error "WRONG!"
 
 export ActionButtonTest = ->
+
+  tw = useTw()
 
   <div className={tw "m-8 children:m-2"}>
     <ActionButton
