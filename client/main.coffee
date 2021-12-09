@@ -9,13 +9,13 @@ import 'react-toastify/dist/ReactToastify.min.css'
 import 'react-virtualized/styles.css'
 import '/imports/ui/main.styl'
 
-import {twind} from '/imports/ui/twind.coffee'
-import {config} from 'meteor/janmp:sdui'
+# import {twind} from '/imports/ui/twind.coffee'
+# import {config} from 'meteor/janmp:sdui'
 import App from '/imports/ui/App'
 
 
 Meteor.startup ->
-  config {twind}
+  # config {twind}
   render <App />, document.getElementById 'react-target'
 
 
