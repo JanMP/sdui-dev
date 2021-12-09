@@ -13,10 +13,9 @@ import {twind} from '/imports/ui/twind.coffee'
 import {config} from 'meteor/janmp:sdui'
 import App from '/imports/ui/App'
 
-import Modal from 'react-modal'
-Modal.setAppElement('#react-target')
 
 Meteor.startup ->
   config {twind}
   render <App />, document.getElementById 'react-target'
+
 
