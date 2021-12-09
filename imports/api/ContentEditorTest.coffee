@@ -8,12 +8,19 @@ SimpleSchema.extendOptions ['sdContent', 'sdTable', 'uniforms']
 
 export ContentTest = new Mongo.Collection 'content-test'
 
-if ContentTest.find().count() is 0
-  [1..10].forEach (i) ->
-    ContentTest.insert
-      title: "Test Page No. #{i}"
-      description: "A short description for Test Page No. #{i}"
-      content: "# Test Page No. #{i} \nThis is the first paragraph of the content for Test Page No. #{i} \n\n And this is (as you might have guessed) the seond paragraph of the content for Test Page No. #{i}"
+# seed test data
+if Meteor.isServer
+  if ContentTest.find().count() is 0
+    [1..10].forEach (i) ->
+      ContentTest.insert
+        title: "Test Page No. #{i}"
+        description: "A short description for Test Page No. #{i}"
+        content: """
+          # Test Page No. #{i}
+          This is the first paragraph of the content for Test Page No. #{i}.
+          
+          And this is (as you might have guessed) the second paragraph of the content for Test Page No. #{i}.
+        """
 
 schemaDefinition =
   _id:
