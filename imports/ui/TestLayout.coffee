@@ -25,12 +25,12 @@ Menu = ->
   tw = useTw()
 
   <div className={tw"p-2 shadow flex justify-around"}>
-    <Link to="/form">Uniforms</Link>
-    <Link to="/button">ActionButton</Link>
-    <Link to="/table">SDTable</Link>
-    <Link to="/list">SDList</Link>
+    <Link to="/form">forms</Link>
+    <Link to="/button">button</Link>
+    <Link to="/table">table</Link>
+    <Link to="/list">list</Link>
     <Link to="/markdown">md</Link>
-    <Link to="/content-editor">ContentEditor</Link>
+    <Link to="/content-editor">content</Link>
   </div>
 
 

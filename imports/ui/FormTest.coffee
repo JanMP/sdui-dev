@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import {AutoForm, useTw} from 'meteor/janmp:sdui'
+import {useTw} from 'meteor/janmp:sdui'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
+import {AutoForm} from 'uniforms-unstyled'
 
 allowedValues = [1..10].map (i) -> "Option #{i}"
 

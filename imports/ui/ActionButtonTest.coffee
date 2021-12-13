@@ -33,7 +33,7 @@ export ActionButtonTest = ->
       onAction={delayedFail}
       label="delayed Fail"
       icon={faVial}
-      buttonClass={tw"bg-pink-300! w-[8rem] h-[8rem] rounded-full!"}
+      buttonClass={tw"bg-pink-300 w-[8rem] h-[8rem] rounded-full!"}
       errorMsg="This did not work..."
     />
      <ActionButton
