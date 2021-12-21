@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {useTw} from 'meteor/janmp:sdui'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
-import {AutoForm} from 'uniforms-unstyled'
+import {AutoForm} from 'uniforms-custom'
 
 allowedValues = [1..10].map (i) -> "Option #{i}"
 
@@ -21,6 +21,7 @@ schema = new SimpleSchema
   string: String
   number: Number
   date: Date
+  bool: Boolean
   hobbies:
     type: Array
   'hobbies.$':

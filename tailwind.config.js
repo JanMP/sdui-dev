@@ -3,13 +3,14 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ['./imports/ui/**/*.{js,jsx,ts,tsx}', './public/*.html'],
+  mode: 'jit',
+  content: ['./imports/ui/**/*.{js,jsx,ts,tsx,coffee}', './public/*.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         primary: colors.teal,
-        secondary: colors.warmGray,
+        secondary: colors.stone,
         danger: colors.red,
         ok: colors.green,
         warn: colors.orange,

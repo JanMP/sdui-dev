@@ -66,6 +66,27 @@ button.icon {
 .u-error-list {
   @apply p-2 bg-danger-300 text-white w-full;
  }
+
+ .u-list-field {
+  @apply mb-4 border-b border-gray-400 pb-2;
+ }
+
+ .u-list-field-header {
+  @apply pb-1 border-b border-gray-400 w-full flex justify-between items-end;
+ }
+
+ .u-list-item-field {
+   @apply flex justify-between items-center;
+ }
+
+ .u-list-item-child-container {
+   @apply flex-grow px-4;
+ }
+
+ .u-list-item-child-container > div > div {
+   @apply my-2;
+ }
+
 .Toastify__toast button {
   @apply w-8 bg-transparent text-white;
  }

@@ -31,14 +31,6 @@
     @apply text-sm font-light;
   }
 
-  label:first-child {
-    @apply block;
-  }
-
-  input + label {
-    @apply ml-2 inline;
-  }
-
   div[required] > label:after {
     content: "*";
   }
@@ -60,12 +52,13 @@
   }
 
   button.primary {
-    @apply bg-gray-500 text-white
+    @apply bg-gray-500 text-white;
   }
 
   
   button.icon-button {
-    @apply rounded-full text-center;
+    border-radius: 500;
+    @apply bg-gray-50;
     width: 40px;
     height: 40px;
   }
