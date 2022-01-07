@@ -2,26 +2,33 @@ import React, {useState} from 'react'
 import {useTw} from 'meteor/janmp:sdui'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
-import {AutoForm} from 'uniforms-custom'
+import {AutoForm} from 'meteor/janmp:sdui'
 
 allowedValues = [1..10].map (i) -> "Option #{i}"
 
+Option = (props) ->
+  <div>
+    <pre>{JSON.stringify props.data, null, 2}</pre>
+  </div>
+
 schema = new SimpleSchema
-  select:
-    type: String
-    allowedValues: allowedValues
-  multiSelect:
-    label: 'Multiple selections with react-functional-select'
-    type: Array
-    uniforms:
-      checkboxes: false
-  'multiSelect.$':
-    type: String
-    allowedValues: allowedValues
-  string: String
-  number: Number
-  date: Date
-  bool: Boolean
+  # select:
+  #   type: String
+  #   allowedValues: allowedValues
+  #   uniforms:
+  #     components: {Option}
+  # multiSelect:
+  #   label: 'Multiple selections with react-functional-select'
+  #   type: Array
+  #   uniforms:
+  #     checkboxes: false
+  # 'multiSelect.$':
+  #   type: String
+  #   allowedValues: allowedValues
+  # string: String
+  # number: Number
+  # date: Date
+  # bool: Boolean
   hobbies:
     type: Array
   'hobbies.$':
@@ -43,6 +50,9 @@ export FormTest = ->
   tw = useTw()
   [model, setModel] = useState freshModel
   
+  onSubmit = (d) ->
+    console.log 'submit', d
+    setModel d
   
   <div className={tw 'h-screen bg-gray-100 p-4 overflow-y-scroll'}>
 
@@ -52,7 +62,7 @@ export FormTest = ->
       <AutoForm
         schema={schemaBridge}
         model={model}
-        onSubmit={setModel}
+        onSubmit={onSubmit}
       />
     </div>
 

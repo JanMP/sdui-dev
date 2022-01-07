@@ -1,7 +1,7 @@
 import {Meteor} from 'meteor/meteor'
 import {Accounts} from 'meteor/accounts-base'
 import React from 'react'
-import {ViewPort, Top, Fill} from 'react-spaces' 
+import {ViewPort, Top, Fill} from 'react-spaces'
 import {useTracker} from 'meteor/react-meteor-data'
 import {FormTest} from './FormTest.coffee'
 import {ActionButtonTest} from './ActionButtonTest.coffee'
