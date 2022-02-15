@@ -8,6 +8,7 @@ import '/imports/api/api'
 import 'react-toastify/dist/ReactToastify.min.css'
 import 'react-virtualized/styles.css'
 import '/imports/ui/main.styl'
+import '/imports/ui/styles/tailwind.css'
 
 # import {twind} from '/imports/ui/twind.coffee'
 # import {config} from 'meteor/janmp:sdui'

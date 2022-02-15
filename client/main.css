@@ -49,7 +49,7 @@ button.ok {
   @apply bg-ok-500 text-white;
  }
 button.warn {
-  @apply bg-warn-500 text-white;
+  @apply bg-warning-500 text-white;
  }
 button.icon {
   @apply w-8 h-8 p-0 rounded-full;
@@ -100,7 +100,7 @@ button.icon {
   @apply bg-ok-500 text-white;
  }
 .Toastify__toast--warning {
-  @apply bg-warn-500 text-white;
+  @apply bg-warning-500 text-white;
  }
 .Toastify__toast--error {
   @apply bg-danger-500 text-white;
