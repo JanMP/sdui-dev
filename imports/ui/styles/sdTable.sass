@@ -1,0 +1,38 @@
+.ReactVirtualized__Grid__innerScrollContainer
+  overflow: visible !important
+
+.ReactVirtualized__Table__row
+  align-items: stretch !important
+  overflow: visible !important
+  &.even
+    background-color: #eee
+
+.ReactVirtualized__Table__rowColumn
+  overflow: hidden
+  &.overflow
+    overflow: visible !important
+
+
+// resizable Header Columns
+
+.ReactVirtualized__Table__headerColumn
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  &:focus
+    outline: 0
+
+.ReactVirtualized__Table__headerTruncatedText
+  flex: auto;
+
+.DragHandle
+  width: 8px
+  z-index: 2;
+  cursor: col-resize;
+  border-right: 2px dotted grey
+
+.DragHandleActive,
+.DragHandleActive:hover
+  color: black
+  z-index: 3
