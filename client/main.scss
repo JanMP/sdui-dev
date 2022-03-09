@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-h1 {
-  @apply text-2xl font-bold leading-tight;
-}
-h2 {
-  @apply text-xl font-bold leading-tight;
+* {
+  @apply focus:ring-transparent #{!important};
 }
 
 ul {
@@ -44,42 +40,17 @@ input + label {
   @apply ml-2 inline;
 }
 
-.hasFloatingLabel {
-  @apply relative border-2 border-primary-500 bg-white;
-  label {
-    @apply absolute top-1/4 left-0 text-2xl text-gray-400 transition-all duration-200;
-  }
-  input:not(:placeholder-shown) + label,
-  input:focus + label {
-    @apply top-0 text-sm text-gray-500;
-  }
-  input {
-    @apply bg-transparent border-none focus:ring-transparent pt-4  text-lg pb-0 px-2 placeholder:text-transparent #{!important};
-  }
+input {
+  @apply border border-gray-300 p-1 rounded w-full;
 }
 
-/* .hasFloatingLabel.u-show-error label {
-  @apply text-white;
-} */
-
-
-
-.admin-app {
-  input:not([type="checkbox"]) {
-      @apply border border-gray-300 rounded bg-white text-gray-800 w-full;
-    }
-
-  input[type="checkbox"] {
-      @apply border-0 bg-secondary-300 checked:bg-primary-600;
-    }
-  input[type="submit" ] {
-    @apply bg-primary-600 text-white w-auto px-4 py-1;
-  }
+input[type="submit" ] {
+  @apply bg-primary-500 text-white w-auto px-4 py-1 border-none;
 }
 
 
 button, .button {
-  @apply bg-secondary-400 text-white px-4 py-1 hover:bg-opacity-50;
+  @apply bg-secondary-400 text-white px-4 py-1 hover:bg-opacity-50 rounded mx-1;
   &.primary {
     @apply bg-primary-500 text-white;
   }
@@ -98,7 +69,7 @@ button, .button {
       @apply text-primary-600;
     }
     &.secondary {
-      @apply text-secondary-600;
+      @apply text-secondary-400;
     }
     &.danger {
       @apply text-danger-600;

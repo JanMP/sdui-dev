@@ -8,7 +8,6 @@ import '/imports/api/api'
 import 'react-toastify/dist/ReactToastify.min.css'
 import '/imports/ui/styles/react-virtualized-styles-fixed.css'
 import '/imports/ui/styles/sdTable.sass'
-# import 'react-virtualized/styles.css'
 # import '/imports/ui/main.styl'
 # import '/imports/ui/styles/tailwind.css'
 

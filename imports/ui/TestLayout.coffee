@@ -9,6 +9,8 @@ import {AutoTableTest} from './AutoTableTest.coffee'
 import {AutoListTest} from './AutoListTest.coffee'
 import {MarkdownTest} from './MarkdownTest.coffee'
 import {ContentEditorTest} from './ContentEditorTest.coffee'
+import {UserTableTest} from './UserTableTest.coffee'
+import {LoginPage} from './LoginPage.coffee'
 import {useTw} from 'meteor/janmp:sdui'
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 
@@ -31,6 +33,8 @@ Menu = ->
     <Link to="/list">list</Link>
     <Link to="/markdown">md</Link>
     <Link to="/content-editor">content</Link>
+    <Link to="/user-table">user-table</Link>
+    <Link to="/login-page">login</Link>
   </div>
 
 
@@ -54,6 +58,8 @@ export TestLayout = ->
           <Route path="/list" element={<AutoListTest/>}/>
           <Route path="/markdown" element={<MarkdownTest/>}/>
           <Route path="/content-editor" element={<ContentEditorTest/>}/>
+          <Route path="/user-table" element={<UserTableTest/>}/>
+          <Route path="/login-page" element={<LoginPage/>}/>
         </Routes>
       </Fill>
     </ViewPort>

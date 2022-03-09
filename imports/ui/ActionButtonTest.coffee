@@ -19,27 +19,27 @@ export ActionButtonTest = ->
       confirmation="Do you really want to do this?"
       label="log test-string"
       icon={faVial}
-      buttonClass="primary"
+      className="primary"
       successMsg="Success, Check both client and server logs"
     />
     <ActionButton
       onAction={delayedWin}
       label="delayed Win"
       icon={faVial}
-      buttonClass="ok"
+      className="ok"
       successMsg="Yeah baby, yeah!"
     />
     <ActionButton
       onAction={delayedFail}
       label="delayed Fail"
       icon={faVial}
-      buttonClass={tw"bg-pink-300 w-[8rem] h-[8rem] rounded-full!"}
+      className={tw"bg-pink-300 w-[8rem] h-[8rem] rounded-full!"}
       errorMsg="This did not work..."
     />
      <ActionButton
       onAction={delayedWin}
       icon={faVial}
-      buttonClass="icon warn"
+      className="icon warn"
     />
      <ActionButton
       onAction={delayedWin}
@@ -48,6 +48,6 @@ export ActionButtonTest = ->
     <ActionButton
       onAction={delayedFail}
       label="no Icon"
-      buttonClass="danger"
+      className="danger"
     />
   </div>
