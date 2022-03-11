@@ -6,6 +6,10 @@ import {Roles} from 'meteor/alanning:roles'
 export dataOptions = createUserTableAPI {}
 
 testUsers = [
+  email: 'pille@mac.com'
+  password: 'Geheim123'
+  roles: ['admin']
+,
   email: 'tester1@test.com'
   password: 'Password123'
   roles: ['admin']
