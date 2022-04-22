@@ -50,7 +50,7 @@ input[type="submit" ] {
 
 
 button, .button {
-  @apply bg-secondary-400 text-white px-4 py-1 hover:bg-opacity-50 rounded mx-1;
+  @apply bg-secondary-400 text-white px-4 py-1 hover:bg-opacity-50 disabled:bg-opacity-50 rounded mx-1;
   &.primary {
     @apply bg-primary-500 text-white;
   }
@@ -85,7 +85,7 @@ button, .button {
 
 
 .spaces-resize-handle {
-  @apply bg-secondary-300 hover:bg-secondary-400 #{!important};
+  @apply bg-secondary-300 hover:bg-secondary-400 text-secondary-300 hover:text-secondary-400 #{!important};
 }
 
 

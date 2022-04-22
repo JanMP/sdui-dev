@@ -1,7 +1,7 @@
 import {Meteor} from 'meteor/meteor'
 import {Accounts} from 'meteor/accounts-base'
 import React from 'react'
-import {ViewPort, Top, Fill} from 'react-spaces'
+import {ViewPort, Top, Fill, Custom} from 'react-spaces'
 import {useTracker} from 'meteor/react-meteor-data'
 import {FormTest} from './FormTest.coffee'
 import {ActionButtonTest} from './ActionButtonTest.coffee'
@@ -11,6 +11,8 @@ import {MarkdownTest} from './MarkdownTest.coffee'
 import {ContentEditorTest} from './ContentEditorTest.coffee'
 import {UserTableTest} from './UserTableTest.coffee'
 import {LoginPage} from './LoginPage.coffee'
+import {CustomHandleTest} from './CustomHandleTest.coffee'
+import {FileUpload} from './FileUpload.coffee'
 import {useTw} from 'meteor/janmp:sdui'
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 
@@ -35,6 +37,8 @@ Menu = ->
     <Link to="/content-editor">content</Link>
     <Link to="/user-table">user-table</Link>
     <Link to="/login-page">login</Link>
+    <Link to="/custom-handle">handle</Link>
+    <Link to="/file-upload">upload</Link>
   </div>
 
 
@@ -60,6 +64,8 @@ export TestLayout = ->
           <Route path="/content-editor" element={<ContentEditorTest/>}/>
           <Route path="/user-table" element={<UserTableTest/>}/>
           <Route path="/login-page" element={<LoginPage/>}/>
+          <Route path="/custom-handle" element={<CustomHandleTest/>}/>
+          <Route path="/file-upload" element={<FileUpload/>}/>
         </Routes>
       </Fill>
     </ViewPort>
