@@ -1,7 +1,7 @@
 import {Meteor} from 'meteor/meteor'
 import {Mongo} from 'meteor/mongo'
 import SimpleSchema from 'simpl-schema'
-import {createTableDataAPI} from 'meteor/janmp:sdui'
+import {createTableDataAPI, currentUserIsInRole} from 'meteor/janmp:sdui'
 
 import _ from 'lodash'
 
@@ -62,6 +62,8 @@ listSchema = new SimpleSchema
     type: Boolean
     # sdTable:
     #   editable: true
+  # _disableEditForRow: Boolean
+  # _disableDeleteForRow: Boolean
 
 getPreSelectPipeline = -> [
     $match:
@@ -78,7 +80,11 @@ getProcessorPipeline = -> [
     alignment: 1
     bool: 1
     sum: $add: ['$a', '$b']
-]
+    _disableEditForRow:
+      unless currentUserIsInRole 'canEditRowsWithALessThan20'
+        $lt: ['$a', 20]
+    _disableDeleteForRow: $eq: ['$alignment', 'lawful']
+  ]
 
 export props = createTableDataAPI
   sourceName: 'testList'
@@ -95,5 +101,8 @@ export props = createTableDataAPI
   canDelete: true
   canSearch: true
   canExport: true
+  checkDisableDeleteForRow: true
+  checkDisableEditForRow: true
+  setupNewItem: -> name: 'new Item'
  
 

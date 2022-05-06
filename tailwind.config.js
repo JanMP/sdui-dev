@@ -3,7 +3,11 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  content: ['./imports/ui/**/*.{js,jsx,ts,tsx,coffee}', './public/*.html'],
+  content: [
+    './imports/ui/**/*.{js,jsx,ts,tsx,coffee}',
+    './public/*.html',
+    '../meteor-packages/sdui/**/*.{js,jsx,ts,tsx,coffee}'
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {

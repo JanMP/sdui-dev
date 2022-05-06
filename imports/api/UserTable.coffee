@@ -8,11 +8,18 @@ export dataOptions = createUserTableAPI {}
 testUsers = [
   email: 'pille@mac.com'
   password: 'Geheim123'
-  roles: ['admin']
+  roles: [
+    'admin'
+    'getUserFiles'
+    'uploadUserFiles'
+    'getCommonFileList'
+    'uploadCommonFiles'
+    'canEditRowsWithALessThan20'
+  ]
 ,
   email: 'tester1@test.com'
   password: 'Password123'
-  roles: ['admin']
+  roles: ['user']
 ,
   email: 'tester2@test.com'
   password: 'Password123'
@@ -20,7 +27,7 @@ testUsers = [
 ,
   email: 'tester3@test.com'
   password: 'Password123'
-  roles: ['admin', 'user', 'editor']
+  roles: ['user']
 ]
 
 testUsers.forEach ({email, password, roles}) ->

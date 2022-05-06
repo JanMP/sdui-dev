@@ -20,6 +20,14 @@ form {
   @apply -ml-1 my-1;
 }
 
+.not-editable-row {
+  @apply cursor-not-allowed
+}
+
+.editable-row {
+  @apply cursor-pointer
+}
+
 .ReactVirtualized__Table__rowColumn form > div {
   @apply m-0 p-0 #{!important};
 }
@@ -64,7 +72,7 @@ button, .button {
     @apply bg-warning-500 text-white;
   }
   &.icon {
-    @apply w-8 h-8 p-0 rounded-full bg-transparent text-black;
+    @apply w-8 h-8 p-0 rounded-full bg-transparent text-black disabled:opacity-50;
     &.primary {
       @apply text-primary-600;
     }

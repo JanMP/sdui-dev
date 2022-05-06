@@ -12,7 +12,7 @@ import {ContentEditorTest} from './ContentEditorTest.coffee'
 import {UserTableTest} from './UserTableTest.coffee'
 import {LoginPage} from './LoginPage.coffee'
 import {CustomHandleTest} from './CustomHandleTest.coffee'
-import {FileUpload} from './FileUpload.coffee'
+import {FileListTest} from './FileListTest.coffee'
 import {useTw} from 'meteor/janmp:sdui'
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 
@@ -38,7 +38,7 @@ Menu = ->
     <Link to="/user-table">user-table</Link>
     <Link to="/login-page">login</Link>
     <Link to="/custom-handle">handle</Link>
-    <Link to="/file-upload">upload</Link>
+    <Link to="/file-list">file-list</Link>
   </div>
 
 
@@ -65,7 +65,7 @@ export TestLayout = ->
           <Route path="/user-table" element={<UserTableTest/>}/>
           <Route path="/login-page" element={<LoginPage/>}/>
           <Route path="/custom-handle" element={<CustomHandleTest/>}/>
-          <Route path="/file-upload" element={<FileUpload/>}/>
+          <Route path="/file-list" element={<FileListTest/>}/>
         </Routes>
       </Fill>
     </ViewPort>
