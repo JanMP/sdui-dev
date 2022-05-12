@@ -6,7 +6,7 @@ Files = new Mongo.Collection 'files'
 export dataOptions = createFilesAPI
   sourceName: 'spaces'
   collection: Files
-  getUserFileListRole: 'getUserFiles'
+  getUserFileListRole: 'getUserFileList'
   uploadUserFilesRole: 'uploadUserFiles'
   getCommonFileListRole: 'getCommonFileList'
   uploadCommonFilesRole: 'uploadCommonFiles'

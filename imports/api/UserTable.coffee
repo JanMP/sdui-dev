@@ -3,19 +3,24 @@ import {Accounts} from 'meteor/accounts-base'
 import {createUserTableAPI} from 'meteor/janmp:sdui'
 import {Roles} from 'meteor/alanning:roles'
 
-export dataOptions = createUserTableAPI {}
-
-testUsers = [
-  email: 'pille@mac.com'
-  password: 'Geheim123'
-  roles: [
+allowedRoles = [
     'admin'
-    'getUserFiles'
+    'getUserFileList'
     'uploadUserFiles'
     'getCommonFileList'
     'uploadCommonFiles'
     'canEditRowsWithALessThan20'
   ]
+
+export dataOptions = createUserTableAPI
+  allowedRoles: allowedRoles
+  viewUserTableRole: 'admin'
+  editUserRole: 'admin'
+
+testUsers = [
+  email: 'pille@mac.com'
+  password: 'Geheim123'
+  roles: allowedRoles
 ,
   email: 'tester1@test.com'
   password: 'Password123'
@@ -29,6 +34,10 @@ testUsers = [
   password: 'Password123'
   roles: ['user']
 ]
+
+
+allowedRoles.forEach (role) ->
+  Roles.createRole role, unlessExists: true
 
 testUsers.forEach ({email, password, roles}) ->
   unless Meteor.users.findOne('emails.0.address': email)?
