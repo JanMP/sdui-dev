@@ -12,35 +12,35 @@ Option = (props) ->
   </div>
 
 schema = new SimpleSchema
-  select:
-    type: String
-    allowedValues: allowedValues
-    uniforms:
-      components: {Option}
-  multiSelect:
-    label: 'Multiple selections with react-functional-select'
-    type: Array
-    uniforms:
-      checkboxes: false
-  'multiSelect.$':
-    type: String
-    allowedValues: allowedValues
-  string: String
-  number: Number
+  # select:
+  #   type: String
+  #   allowedValues: allowedValues
+  #   uniforms:
+  #     components: {Option}
+  # multiSelect:
+  #   label: 'Multiple selections with react-functional-select'
+  #   type: Array
+  #   uniforms:
+  #     checkboxes: false
+  # 'multiSelect.$':
+  #   type: String
+  #   allowedValues: allowedValues
+  # string: String
+  # number: Number
   date: Date
-  bool: Boolean
-  hobbies:
-    type: Array
-  'hobbies.$':
-    type: Object
-  'hobbies.$.Name': String
-  'hobbies.$.Since': Date
+  # bool: Boolean
+  # hobbies:
+  #   type: Array
+  # 'hobbies.$':
+  #   type: Object
+  # 'hobbies.$.Name': String
+  # 'hobbies.$.Since': Date
 
-freshModel =
-  select: 'Option 1'
-  multiSelect: ['Option 1', 'Option 2']
-  hobbies: [
-  ]
+freshModel = {}
+  # select: 'Option 1'
+  # multiSelect: ['Option 1', 'Option 2']
+  # hobbies: [
+  # ]
 
 schemaBridge = new SimpleSchema2Bridge schema
 

@@ -16,3 +16,5 @@ s = "123/test1/test2"
 
 console.log 1 in [1]
 console.log typeof []
+console.log new Date().toISOString().slice(0,-8)
+console.log new Date()
