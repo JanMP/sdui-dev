@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
-import {MarkdownEditor, MarkdownDisplay, useTw, useSession} from 'meteor/janmp:sdui'
+import {MarkdownEditor, MarkdownDisplay, useSession} from 'meteor/janmp:sdui'
 import {Fill, Custom, AnchorType} from 'react-spaces'
 import {AutoListTest} from './AutoListTest.coffee'
+
+
 export MarkdownTest = ->
 
   [value, setValue] = useSession 'markdown', '# Markdown Test'
-  tw = useTw()
 
   <Fill>
     <Custom

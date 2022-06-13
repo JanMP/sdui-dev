@@ -1,24 +1,22 @@
 import React from 'react'
-import {SdContentEditor, FileList, useTw} from 'meteor/janmp:sdui'
+import {SdContentEditor, FileList} from 'meteor/janmp:sdui'
 import {dataOptions} from '/imports/api/ContentEditorTest.coffee'
-# import {dataOptions as fileListDataOptions} from '/imports/api/Files.coffee'
+import {dataOptions as fileListDataOptions} from '/imports/api/Files.coffee'
 
-# FilePane = ->
-#   <FileList dataOptions={fileListDataOptions}/>
+FilePane = ->
+  <FileList dataOptions={fileListDataOptions}/>
 
 
 ListItemContent = ({rowData}) ->
 
-  tw = useTw()
-
-  <div className={tw"p-2"}>
-    <div className={tw"text-lg font-bold"}>{rowData?.title}</div>
-    <span className={tw"text-sm"}>{rowData?.description}</span>
+  <div className="p-2">
+    <div className="text-lg font-bold">{rowData?.title}</div>
+    <span className="text-sm">{rowData?.description}</span>
   </div>
 
 
 export ContentEditorTest = ->
   <SdContentEditor
     dataOptions={dataOptions}
-    customComponents={{ListItemContent}}
+    customComponents={{ListItemContent, FilePane}}
   />

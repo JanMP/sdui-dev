@@ -104,5 +104,7 @@ export props = createTableDataAPI
   checkDisableDeleteForRow: true
   checkDisableEditForRow: true
   setupNewItem: -> name: 'new Item'
+  initialSortColumn: 'sum'
+  initialSortDirection: 'ASC'
  
 

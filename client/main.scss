@@ -49,11 +49,11 @@ input + label {
 }
 
 input {
-  @apply border border-gray-300 p-1 rounded w-full;
+  @apply border border-gray-300 p-1 rounded w-full disabled:opacity-50;
 }
 
 input[type="submit" ] {
-  @apply bg-primary-500 text-white w-auto px-4 py-1 border-none;
+  @apply bg-primary-500 text-white w-auto px-4 py-1 border-none disabled:opacity-50;
 }
 
 

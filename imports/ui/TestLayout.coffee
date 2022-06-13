@@ -12,8 +12,7 @@ import {ContentEditorTest} from './ContentEditorTest.coffee'
 import {UserTableTest} from './UserTableTest.coffee'
 import {LoginPage} from './LoginPage.coffee'
 import {CustomHandleTest} from './CustomHandleTest.coffee'
-# import {FileListTest} from './FileListTest.coffee'
-import {useTw} from 'meteor/janmp:sdui'
+import {FileListTest} from './FileListTest.coffee'
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 
 # ResetPasswordPage = ->
@@ -26,9 +25,7 @@ import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-rou
 
 Menu = ->
 
-  tw = useTw()
-
-  <div className={tw"p-2 shadow flex justify-around"}>
+  <div className="p-2 shadow flex justify-around">
     <Link to="/form">forms</Link>
     <Link to="/button">button</Link>
     <Link to="/table">table</Link>
@@ -38,13 +35,13 @@ Menu = ->
     <Link to="/user-table">user-table</Link>
     <Link to="/login-page">login</Link>
     <Link to="/custom-handle">handle</Link>
+    <Link to="/files">files</Link>
   </div>
 
 
 Fnord = ->
-  tw = useTw()
 
-  <div className={tw"bg-green-100 p-4"}>Fnord</div>
+  <div className="bg-green-100 p-4">Fnord</div>
 
 
 export TestLayout = ->
@@ -64,6 +61,7 @@ export TestLayout = ->
           <Route path="/user-table" element={<UserTableTest/>}/>
           <Route path="/login-page" element={<LoginPage/>}/>
           <Route path="/custom-handle" element={<CustomHandleTest/>}/>
+          <Route path="/files" element={<FileListTest/>}/>
         </Routes>
       </Fill>
     </ViewPort>

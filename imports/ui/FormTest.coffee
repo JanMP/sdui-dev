@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {useTw} from 'meteor/janmp:sdui'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
 import {AutoForm} from 'meteor/janmp:sdui'
@@ -46,19 +45,17 @@ schemaBridge = new SimpleSchema2Bridge schema
 
 
 export FormTest = ->
-
-  tw = useTw()
   [model, setModel] = useState freshModel
   
   onSubmit = (d) ->
     console.log 'submit', d
     setModel d
   
-  <div className={tw 'h-screen bg-gray-100 p-4 overflow-y-scroll'}>
+  <div className="h-screen bg-gray-100 p-4 overflow-y-scroll">
 
     <h1>Test</h1>
     
-    <div className={tw "bg-white border shadow-xl border-gray-300 rounded my-4 p-4"}>
+    <div className="bg-white border shadow-xl border-gray-300 rounded my-4 p-4">
       <AutoForm
         schema={schemaBridge}
         model={model}
@@ -66,9 +63,9 @@ export FormTest = ->
       />
     </div>
 
-    <div className={tw "bg-white border hover:shadow-lg border-gray-300 rounded p-4"}>
+    <div className="bg-white border hover:shadow-lg border-gray-300 rounded p-4">
       <button
-        className={tw 'bg-danger! text-white'}
+        className="bg-danger! text-white"
         onClick={-> setModel freshModel}>reset model</button>
       <pre>{JSON.stringify model, null, 2}</pre>
     </div>
