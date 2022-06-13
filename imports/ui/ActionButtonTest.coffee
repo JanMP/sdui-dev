@@ -10,7 +10,7 @@ delayedFail = -> delay(2000).then -> throw new Error "WRONG!"
 
 export ActionButtonTest = ->
 
-  <div className={tw "m-8 children:m-2"}>
+  <div className="m-8 flex gap-4 items-center">
     <ActionButton
       method="ActionButtonTest.logTestString"
       data={{testString:"test-string from ActionButton"}}
@@ -31,7 +31,7 @@ export ActionButtonTest = ->
       onAction={delayedFail}
       label="delayed Fail"
       icon={faVial}
-      className={tw"bg-pink-300 w-[8rem] h-[8rem] rounded-full text-2xl text-green-200 hover:text-green-600"}
+      className="bg-pink-300 w-[8rem] h-[8rem] rounded-full text-2xl text-green-200 hover:text-green-600"
       errorMsg="This did not work..."
     />
      <ActionButton
