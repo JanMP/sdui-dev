@@ -13,6 +13,8 @@ import {UserTableTest} from './UserTableTest.coffee'
 import {LoginPage} from './LoginPage.coffee'
 import {CustomHandleTest} from './CustomHandleTest.coffee'
 import {FileListTest} from './FileListTest.coffee'
+import {FileSelectTest} from './FileSelectTest.coffee'
+
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 
 # ResetPasswordPage = ->
@@ -36,6 +38,7 @@ Menu = ->
     <Link to="/login-page">login</Link>
     <Link to="/custom-handle">handle</Link>
     <Link to="/files">files</Link>
+    <Link to="/file-select">file-select</Link>
   </div>
 
 
@@ -62,6 +65,7 @@ export TestLayout = ->
           <Route path="/login-page" element={<LoginPage/>}/>
           <Route path="/custom-handle" element={<CustomHandleTest/>}/>
           <Route path="/files" element={<FileListTest/>}/>
+          <Route path="/file-select" element={<FileSelectTest/>}/>
         </Routes>
       </Fill>
     </ViewPort>

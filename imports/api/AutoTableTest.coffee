@@ -19,22 +19,7 @@ if Meteor.isServer
         alignment: _.sample ['chaotic', 'neutral', 'lawful']
         bool: _.sample [true, false]
 
-testSchema = new SimpleSchema
-  _id:
-    type: String
-    optional: true
-    uniforms: -> null
-  name: String
-  a: Number
-  b: Number
-  alignment:
-    type: String
-    allowedValues: ['chaotic', 'neutral', 'lawful']
-  bool:
-    type: Boolean
-    optional: true
-
-listSchema = new SimpleSchema
+schemaDefinition =
   _id:
     type: String
     optional: true
@@ -65,6 +50,9 @@ listSchema = new SimpleSchema
   # _disableEditForRow: Boolean
   # _disableDeleteForRow: Boolean
 
+sourceSchema = new SimpleSchema _.omit schemaDefinition, ['sum']
+listSchema = new SimpleSchema schemaDefinition
+
 getPreSelectPipeline = -> [
     $match:
       a: $lt: 9
@@ -88,10 +76,10 @@ getProcessorPipeline = -> [
 
 export props = createTableDataAPI
   sourceName: 'testList'
-  sourceSchema: testSchema
+  sourceSchema: sourceSchema
   collection: Test
   listSchema: listSchema
-  formSchema: testSchema
+  formSchema: sourceSchema
   viewTableRole: 'any'
   # getPreSelectPipeline: getPreSelectPipeline
   getProcessorPipeline: getProcessorPipeline
@@ -106,5 +94,6 @@ export props = createTableDataAPI
   setupNewItem: -> name: 'new Item'
   initialSortColumn: 'sum'
   initialSortDirection: 'ASC'
+  showRowCount: true
  
 

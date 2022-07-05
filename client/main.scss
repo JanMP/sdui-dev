@@ -56,6 +56,21 @@ input[type="submit" ] {
   @apply bg-primary-500 text-white w-auto px-4 py-1 border-none disabled:opacity-50;
 }
 
+.sort-select-container {
+  @apply border rounded border-gray-300 bg-white text-gray-800 w-full disabled:opacity-50;
+}
+
+.sort-select__control, .sort-select__input {
+  @apply border-0 focus:border-0 #{!important};
+}
+
+input.search-input {
+  @apply h-[40px];
+}
+
+.sort-select__control, .sort-select__input {
+  @apply border-0 focus:border-0 #{!important};
+}
 
 button, .button {
   @apply bg-secondary-400 text-white px-4 py-1 hover:bg-opacity-50 disabled:bg-opacity-50 rounded mx-1;

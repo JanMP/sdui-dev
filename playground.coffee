@@ -14,7 +14,12 @@ s = "123/test1/test2"
 # console.log strings.map (s) -> s.replace /\.thumbnail\.png$/, ''
 
 
-console.log 1 in [1]
-console.log typeof []
-console.log new Date().toISOString().slice(0,-8)
-console.log new Date()
+range = (from, to) ->
+  [Symbol.iterator]: ->
+    value= from
+    next: ->
+      done = value >= to
+      value += 1 unless done
+      {done, value}
+
+console.log [range(20, 30)...]
