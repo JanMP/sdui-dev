@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-import {MarkdownEditor, MarkdownDisplay, useSession} from 'meteor/janmp:sdui'
+import {SdEditor, MarkdownDisplay, useSession} from 'meteor/janmp:sdui'
 import {Fill, Custom, AnchorType} from 'react-spaces'
 import {AutoListTest} from './AutoListTest.coffee'
 
@@ -10,23 +10,14 @@ export MarkdownTest = ->
   editor = instance?.current?.editor
   [value, setValue] = useSession 'markdown', '# Markdown Test'
 
-  useEffect ->
-    console.log instance
-  , [instance]
 
-  onChange = (value) ->
-    console.log editor.getCursorPosition()
-    setValue value
-
-  insertText = ->
-    editor.session.insert editor.getCursorPosition(), 'fnord'
 
   <Fill>
     <Custom
       anchor={AnchorType.Top}
       anchorSize={200}
       resizable={true}
-      onClick={insertText}
+      scrollable={true}
     >
       <MarkdownDisplay
         markdown={value}
@@ -35,10 +26,9 @@ export MarkdownTest = ->
       />
     </Custom>
     <Fill>
-      <MarkdownEditor
-        instance={instance}
+      <SdEditor
         value={value}
-        onChange={onChange}
+        onChange={setValue}
         editorWidth={"100%"}
         editorHeight={"100%"}
       />
