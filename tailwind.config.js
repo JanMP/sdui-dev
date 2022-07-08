@@ -16,7 +16,7 @@ module.exports = {
         secondary: colors.slate,
         danger: colors.red,
         ok: colors.green,
-        warning: colors.orange,
+        warning: colors.orange
       }
     },
   },

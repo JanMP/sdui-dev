@@ -14,6 +14,8 @@ import {LoginPage} from './LoginPage.coffee'
 import {CustomHandleTest} from './CustomHandleTest.coffee'
 import {FileListTest} from './FileListTest.coffee'
 import {FileSelectTest} from './FileSelectTest.coffee'
+import {DateTimeMultiInputTest} from './DateTimeMultiInputTest.coffee'
+import {QueryEditorTest} from './QueryEditorTest.coffee'
 
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 
@@ -39,6 +41,8 @@ Menu = ->
     <Link to="/custom-handle">handle</Link>
     <Link to="/files">files</Link>
     <Link to="/file-select">file-select</Link>
+    <Link to="/date-input">date-input</Link>
+    <Link to="/query-editor">query-editor</Link>
   </div>
 
 
@@ -66,6 +70,8 @@ export TestLayout = ->
           <Route path="/custom-handle" element={<CustomHandleTest/>}/>
           <Route path="/files" element={<FileListTest/>}/>
           <Route path="/file-select" element={<FileSelectTest/>}/>
+          <Route path="/date-input" element={<DateTimeMultiInputTest/>}/>
+          <Route path="/query-editor" element={<QueryEditorTest/>}/>
         </Routes>
       </Fill>
     </ViewPort>

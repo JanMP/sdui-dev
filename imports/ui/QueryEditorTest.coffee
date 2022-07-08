@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {QueryEditor, queryUiObjectToQuery} from 'meteor/janmp:sdui'
+import {SimpleSchema2Bridge} from 'uniforms-bridge-simple-schema-2'
 import SimpleSchema from 'simpl-schema'
 
 
@@ -28,6 +29,8 @@ schema = new SimpleSchema
   'subDoc.x': Number
   'subDoc.y': Number
 
+bridge = new SimpleSchema2Bridge schema
+
 listen =
   b:
     'Liste 1': [1,2,3]
@@ -42,7 +45,7 @@ getList = ({subject,predicate,object}) ->
   listen[subject]?[object.value] ? []
 
 
-export default QueryEditorTest = ->
+export QueryEditorTest = ->
 
   [queryUiObject, setQueryUiObject] = useState null
   [query, setQuery] = useState 1
@@ -57,7 +60,7 @@ export default QueryEditorTest = ->
   <>
     <QueryEditor
       rule={queryUiObject}
-      schema={schema}
+      bridge={bridge}
       showRule={true}
       onChange={setQueryUiObject}
     />
