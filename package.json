@@ -6,7 +6,7 @@
     "run-ios-device": "meteor run ios-device --settings=settings.json --mobile-server MacBook-Pro-von-Jan-Michael.local:3000",
     "start-tailwind": "npx tailwindcss -o ./imports/ui/styles/tailwind.css --watch",
     "test": "meteor test --once --driver-package meteortesting:mocha",
-    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha --port 3001",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
@@ -36,6 +36,8 @@
     "rc-tooltip": "^5.1.1",
     "react": "^16.13.1",
     "react-ace": "^9.5.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^16.13.1",
     "react-draggable": "^4.4.4",
     "react-functional-select": "^3.3.3",

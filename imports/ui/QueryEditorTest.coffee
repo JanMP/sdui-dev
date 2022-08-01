@@ -2,9 +2,12 @@ import React, {useState, useEffect} from 'react'
 import {QueryEditor, queryUiObjectToQuery} from 'meteor/janmp:sdui'
 import {SimpleSchema2Bridge} from 'uniforms-bridge-simple-schema-2'
 import SimpleSchema from 'simpl-schema'
-
+import {Fill} from 'react-spaces'
+import testQuery from './TestQuery.json'
 
 SimpleSchema.extendOptions ['QueryEditor']
+
+
 
 ListComponent = ->
   <span>ListComponent from Schema</span>
@@ -47,17 +50,16 @@ getList = ({subject,predicate,object}) ->
 
 export QueryEditorTest = ->
 
-  [queryUiObject, setQueryUiObject] = useState null
+  [queryUiObject, setQueryUiObject] = useState testQuery
   [query, setQuery] = useState 1
 
   useEffect ->
     if queryUiObject?
       setQuery queryUiObjectToQuery {queryUiObject, getList}
-      # console.log queryUiObject
   , [queryUiObject]
 
 
-  <>
+  <Fill scrollable>
     <QueryEditor
       rule={queryUiObject}
       bridge={bridge}
@@ -70,4 +72,4 @@ export QueryEditorTest = ->
     <div>
       <pre>{JSON.stringify query, null, 2}</pre>
     </div>
-  </>
+  </Fill>

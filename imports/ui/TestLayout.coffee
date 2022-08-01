@@ -16,6 +16,10 @@ import {FileListTest} from './FileListTest.coffee'
 import {FileSelectTest} from './FileSelectTest.coffee'
 import {DateTimeMultiInputTest} from './DateTimeMultiInputTest.coffee'
 import {QueryEditorTest} from './QueryEditorTest.coffee'
+import {RoleChecksTest} from './RoleChecksTest.coffee'
+import {SdDocumentSelectTest} from './SdDocumentSelectTest.coffee'
+
+import {useCurrentUserIsInRole} from 'meteor/janmp:sdui'
 
 import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
 
@@ -28,21 +32,27 @@ import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-rou
 #   )
 
 Menu = ->
+  canDo = useCurrentUserIsInRole 'canEditRowsWithALessThan20'
 
   <div className="p-2 shadow flex justify-around">
-    <Link to="/form">forms</Link>
-    <Link to="/button">button</Link>
+    <Link to="/document-select">document-select</Link>
     <Link to="/table">table</Link>
     <Link to="/list">list</Link>
-    <Link to="/markdown">md</Link>
     <Link to="/content-editor">content</Link>
     <Link to="/user-table">user-table</Link>
     <Link to="/login-page">login</Link>
+    <Link to="/role-checks">role-checks</Link>
+    <div>{if canDo then '+' else '-'}</div>
+    {###
+    <Link to="/form">forms</Link>
     <Link to="/custom-handle">handle</Link>
-    <Link to="/files">files</Link>
-    <Link to="/file-select">file-select</Link>
     <Link to="/date-input">date-input</Link>
+    <Link to="/file-select">file-select</Link>
+    <Link to="/files">files</Link>
     <Link to="/query-editor">query-editor</Link>
+    <Link to="/button">button</Link>
+    <Link to="/markdown">md</Link>
+    ###}
   </div>
 
 
@@ -72,6 +82,8 @@ export TestLayout = ->
           <Route path="/file-select" element={<FileSelectTest/>}/>
           <Route path="/date-input" element={<DateTimeMultiInputTest/>}/>
           <Route path="/query-editor" element={<QueryEditorTest/>}/>
+          <Route path="/role-checks" element={<RoleChecksTest/>}/>
+          <Route path="/document-select" element={<SdDocumentSelectTest/>}/>
         </Routes>
       </Fill>
     </ViewPort>

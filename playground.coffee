@@ -1,4 +1,4 @@
-s = "123/test1/test2"
+# s = "123/test1/test2"
 # regex = /^(.+?)(?=\/)/g
 # console.log s.match regex
 # console.log regex.test s
@@ -14,12 +14,12 @@ s = "123/test1/test2"
 # console.log strings.map (s) -> s.replace /\.thumbnail\.png$/, ''
 
 
-range = (from, to) ->
-  [Symbol.iterator]: ->
-    value= from
-    next: ->
-      done = value >= to
-      value += 1 unless done
-      {done, value}
+# range = (from, to) ->
+#   [Symbol.iterator]: ->
+#     value= from
+#     next: ->
+#       done = value >= to
+#       value += 1 unless done
+#       {done, value}
 
-console.log [range(20, 30)...]
+# console.log [range(20, 30)...]

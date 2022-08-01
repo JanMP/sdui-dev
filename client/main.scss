@@ -64,8 +64,11 @@ input[type="submit" ] {
   @apply border-0 focus:border-0 #{!important};
 }
 
-input.search-input {
-  @apply h-[40px];
+.search-input {
+  @apply h-[40px] #{!important};
+  &--warn {
+    @apply text-warning-600 #{!important};
+  }
 }
 
 .sort-select__control, .sort-select__input {

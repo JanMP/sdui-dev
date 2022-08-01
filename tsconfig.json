@@ -25,7 +25,11 @@
     "baseUrl": ".",
     "paths": {
       /* Support absolute /imports/* with a leading '/' */
-      "/*": ["*"]
+      "/*": ["*"],
+      "meteor/*": [
+        "node_modules/@types/meteor/*",
+        ".meteor/local/types/packages.d.ts"
+      ]
     },
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -34,7 +38,7 @@
     "preserveSymlinks": true
   },
   "exclude": [
-    "./.meteor/**",
+    "./.meteor/**" ,
     "./packages/**",
     "./scaffolder/**"
   ]

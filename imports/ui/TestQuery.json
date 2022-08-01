@@ -1,0 +1,58 @@
+{
+  "type": "logicBlock",
+  "conjunction": {
+    "key": "$and",
+    "value": "$and",
+    "label": "alle Bedingungen erfüllt",
+    "context": null
+  },
+  "content": [
+    {
+      "type": "logicBlock",
+      "conjunction": {
+        "key": "$or",
+        "value": "$or",
+        "label": "mindestens eine Bedingung erfüllt",
+        "context": null
+      },
+      "content": [
+        {
+          "type": "sentence",
+          "content": {
+            "subject": {
+              "key": "a",
+              "value": "a",
+              "label": "A"
+            },
+            "predicate": {
+              "key": "$eq",
+              "value": "$eq",
+              "label": "="
+            },
+            "object": {
+              "value": "1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "sentence",
+      "content": {
+        "subject": {
+          "key": "b",
+          "value": "b",
+          "label": "B"
+        },
+        "predicate": {
+          "key": "$eq",
+          "value": "$eq",
+          "label": "="
+        },
+        "object": {
+          "value": 2
+        }
+      }
+    }
+  ]
+}

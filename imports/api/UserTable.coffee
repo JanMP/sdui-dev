@@ -3,7 +3,9 @@ import {Accounts} from 'meteor/accounts-base'
 import {createUserTableAPI} from 'meteor/janmp:sdui'
 import {Roles} from 'meteor/alanning:roles'
 
-allowedRoles = [
+
+getAllowedRoles = ->
+  global: [
     'admin'
     'getUserFileList'
     'uploadUserFiles'
@@ -11,33 +13,33 @@ allowedRoles = [
     'uploadCommonFiles'
     'canEditRowsWithALessThan20'
   ]
+  scope:
+    test1: ['editor']
+    test2: ['editor']
 
 export dataOptions = createUserTableAPI
-  allowedRoles: allowedRoles
-  viewUserTableRole: 'admin'
-  editUserRole: 'admin'
+  getAllowedRoles: getAllowedRoles
+  viewUserTableRole: 'logged-in'
+  editUserRole: 'logged-in'
 
 testUsers = [
   email: 'pille@mac.com'
   password: 'Geheim123'
-  roles: allowedRoles
+  roles: [{role: 'admin'},{role: 'editor', scope: 'test1'}]
 ,
   email: 'tester1@test.com'
   password: 'Password123'
-  roles: ['user']
+  roles:  [{role: 'editor', scope: 'test1'}, {role: 'editor', scope: 'test2'}]
 ,
   email: 'tester2@test.com'
   password: 'Password123'
-  roles: ['user']
+  roles: [{role: 'fnord', scope: 'fubar'}]
 ,
   email: 'tester3@test.com'
   password: 'Password123'
   roles: ['user']
 ]
 
-
-allowedRoles.forEach (role) ->
-  Roles.createRole role, unlessExists: true
 
 testUsers.forEach ({email, password, roles}) ->
   unless Meteor.users.findOne('emails.0.address': email)?
