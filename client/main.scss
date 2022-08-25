@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '{}/imports/ui/styles/DatePicker.scss';
+@import '{}/imports/ui/styles/DateTimePicker.scss';
+@import '{}/imports/ui/styles/TimePicker.scss';
+
 * {
   @apply focus:ring-transparent #{!important};
 }
@@ -34,6 +38,10 @@ form {
 
 form > div {
   @apply my-4;
+}
+
+form.grid > div {
+  @apply my-0 #{!important};
 }
 
 label {
@@ -75,36 +83,36 @@ input[type="submit" ] {
   @apply border-0 focus:border-0 #{!important};
 }
 
-button, .button {
-  @apply bg-secondary-400 text-white px-4 py-1 hover:bg-opacity-50 disabled:bg-opacity-50 rounded mx-1;
+button {
+  @apply bg-secondary-400 text-white px-4 py-1 disabled:bg-opacity-50 rounded mx-1;
   &.primary {
-    @apply bg-primary-500 text-white;
+    @apply bg-primary-500 text-white disabled:bg-opacity-50;
   }
   &.danger {
-    @apply bg-danger-500 text-white;
+    @apply bg-danger-500 text-white disabled:bg-opacity-50;
   }
   &.ok {
-    @apply bg-ok-500 text-white;
+    @apply bg-ok-500 text-white disabled:bg-opacity-50;
   }
   &.warn {
-    @apply bg-warning-500 text-white;
+    @apply bg-warning-500 text-white disabled:bg-opacity-50;
   }
   &.icon {
     @apply w-8 h-8 p-0 rounded-full bg-transparent text-black disabled:opacity-50;
     &.primary {
-      @apply text-primary-600;
+      @apply text-primary-600 disabled:bg-opacity-50;
     }
     &.secondary {
-      @apply text-secondary-400;
+      @apply text-secondary-400 disabled:bg-opacity-50;
     }
     &.danger {
-      @apply text-danger-600;
+      @apply text-danger-600 disabled:bg-opacity-50;
     }
     &.ok {
-      @apply text-ok-600;
+      @apply text-ok-600 disabled:bg-opacity-50;
     }
     &.warning {
-      @apply text-warning-600;
+      @apply text-warning-600 disabled:bg-opacity-50;
     }
   }
 }

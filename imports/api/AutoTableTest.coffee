@@ -27,7 +27,7 @@ schemaDefinition =
   name: String
   a:
     type: Number
-    min: 5
+    # min: 1
     # sdTable:
     #   editable: true
   b:
@@ -45,8 +45,8 @@ schemaDefinition =
       overflow: true
   bool:
     type: Boolean
-    # sdTable:
-    #   editable: true
+    sdTable:
+      editable: true
   # _disableEditForRow: Boolean
   # _disableDeleteForRow: Boolean
 

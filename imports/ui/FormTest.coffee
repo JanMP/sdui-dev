@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
+import {ManagedForm} from 'meteor/janmp:sdui'
 import {AutoForm} from 'meteor/janmp:sdui'
 
 allowedValues = [1..10].map (i) -> "Option #{i}"
@@ -11,35 +12,35 @@ Option = (props) ->
   </div>
 
 schema = new SimpleSchema
-  # select:
-  #   type: String
-  #   allowedValues: allowedValues
-  #   uniforms:
-  #     components: {Option}
-  # multiSelect:
-  #   label: 'Multiple selections with react-functional-select'
-  #   type: Array
-  #   uniforms:
-  #     checkboxes: false
-  # 'multiSelect.$':
-  #   type: String
-  #   allowedValues: allowedValues
-  # string: String
-  # number: Number
+  select:
+    type: String
+    allowedValues: allowedValues
+    uniforms:
+      components: {Option}
+  multiSelect:
+    label: 'Multiple selections with react-functional-select'
+    type: Array
+    uniforms:
+      checkboxes: false
+  'multiSelect.$':
+    type: String
+    allowedValues: allowedValues
+  string: String
+  number: Number
   date: Date
-  # bool: Boolean
-  # hobbies:
-  #   type: Array
-  # 'hobbies.$':
-  #   type: Object
-  # 'hobbies.$.Name': String
-  # 'hobbies.$.Since': Date
+  bool: Boolean
+  hobbies:
+    type: Array
+  'hobbies.$':
+    type: Object
+  'hobbies.$.Name': String
+  'hobbies.$.Since': Date
 
-freshModel = {}
-  # select: 'Option 1'
-  # multiSelect: ['Option 1', 'Option 2']
-  # hobbies: [
-  # ]
+freshModel =
+  select: 'Option 1'
+  multiSelect: ['Option 1', 'Option 2']
+  hobbies: [
+  ]
 
 schemaBridge = new SimpleSchema2Bridge schema
 
@@ -56,8 +57,8 @@ export FormTest = ->
     <h1>Test</h1>
     
     <div className="bg-white border shadow-xl border-gray-300 rounded my-4 p-4">
-      <AutoForm
-        schema={schemaBridge}
+      <ManagedForm
+        schemaBridge={schemaBridge}
         model={model}
         onSubmit={onSubmit}
       />

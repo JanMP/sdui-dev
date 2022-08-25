@@ -1,5 +1,5 @@
 import React from 'react'
-import {SdContentEditor, FileList} from 'meteor/janmp:sdui'
+import {SdContentEditor} from 'meteor/janmp:sdui'
 import {dataOptions} from '/imports/api/ContentEditorTest.coffee'
 
 
