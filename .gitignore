@@ -1,4 +1,5 @@
 node_modules/
+node_modules-fnord/
 forms/uniforms-custom/node_modules
 .deploy
 settings.json

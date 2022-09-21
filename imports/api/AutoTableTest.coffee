@@ -60,13 +60,7 @@ getPreSelectPipeline = -> [
   ]
 
 getProcessorPipeline = -> [
-  $project:
-    _id: 1
-    name: 1
-    a: 1
-    b: 1
-    alignment: 1
-    bool: 1
+  $addFields:
     sum: $add: ['$a', '$b']
     _disableEditForRow:
       unless currentUserIsInRole 'canEditRowsWithALessThan20'

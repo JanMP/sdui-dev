@@ -18,6 +18,7 @@ import {DateTimeMultiInputTest} from './DateTimeMultiInputTest.coffee'
 import {QueryEditorTest} from './QueryEditorTest.coffee'
 import {RoleChecksTest} from './RoleChecksTest.coffee'
 import {SdDocumentSelectTest} from './SdDocumentSelectTest.coffee'
+import {IframeTest} from './IframeTest.coffee'
 
 import {useCurrentUserIsInRole} from 'meteor/janmp:sdui'
 
@@ -36,7 +37,7 @@ Menu = ->
 
   <div className="p-2 shadow flex justify-around">
     
-    <Link to="/fnord">fnord</Link>
+    <Link to="/iframe">iframe</Link>
     <Link to="/content-editor">content</Link>
     <Link to="/form">forms</Link>
     <Link to="/date-input">date-input</Link>
@@ -44,13 +45,14 @@ Menu = ->
     <Link to="/list">list</Link>
     <Link to="/user-table">user-table</Link>
     <Link to="/login-page">login</Link>
+    <Link to="/query-editor">query-editor</Link>
+    <Link to="/button">button</Link>
+    {###
+    <Link to="/fnord">fnord</Link>
     <Link to="/document-select">document-select</Link>
     <Link to="/role-checks">role-checks</Link>
     <Link to="/custom-handle">handle</Link>
-    <Link to="/query-editor">query-editor</Link>
-    <Link to="/button">button</Link>
     <Link to="/markdown">md</Link>
-    {###
     <Link to="/file-select">file-select</Link>
     <Link to="/files">files</Link>
     <div>{if canDo then '+' else '-'}</div>
@@ -83,6 +85,8 @@ export TestLayout = ->
           <Route path="/query-editor" element={<QueryEditorTest/>}/>
           <Route path="/role-checks" element={<RoleChecksTest/>}/>
           <Route path="/document-select" element={<SdDocumentSelectTest/>}/>
+          <Route path="/iframe" element={<IframeTest/>}/>
+
          {###
           <Route path="/files" element={<FileListTest/>}/>
           <Route path="/file-select" element={<FileSelectTest/>}/>

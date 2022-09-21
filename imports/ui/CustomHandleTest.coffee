@@ -52,9 +52,10 @@ export CustomHandleTest = ->
       handleRender={handleRender}
     >
       <RightResizable
-        className="bg-blue-100"
         size="50%"
         handleRender={handleRender}
-      />
+      >
+        <iframe src="http://localhost:8080" title="test" className="h-full w-full"/>
+      </RightResizable>
     </BottomResizable>
   </Fill>
