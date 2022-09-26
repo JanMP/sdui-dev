@@ -1,6 +1,6 @@
 import React from 'react'
 import {SdList} from 'meteor/janmp:sdui'
-import {props} from '/imports/api/AutoTableTest.coffee'
+import {props} from '/imports/api/SdTableTest.coffee'
 
 ListItemContent = ({rowData}) ->
 
@@ -21,7 +21,7 @@ ListItem = ({rowData, index, onDelete, onClick}) ->
   </div>
 
 # try with customComponents={{}}, {{ListItem}} or {{ListItemContent}}
-export AutoListTest = ->
+export SdListTest = ->
   <SdList
     dataOptions={props}
     customComponents={{ListItemContent}}

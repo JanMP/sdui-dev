@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {SdDocumentSelect} from 'meteor/janmp:sdui'
-import {props} from '/imports/api/AutoTableTest.coffee'
+import {props} from '/imports/api/SdTableTest.coffee'
 
 selectOptions =
   getValue: (row) -> row['_id']

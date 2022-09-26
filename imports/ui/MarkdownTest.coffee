@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import {SdEditor, MarkdownDisplay, useSession} from 'meteor/janmp:sdui'
 import {Fill, Custom, AnchorType} from 'react-spaces'
-import {AutoListTest} from './AutoListTest.coffee'
 
 
 export MarkdownTest = ->

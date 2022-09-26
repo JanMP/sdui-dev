@@ -1,5 +1,5 @@
-import './AutoTableTest'
+import './SdTableTest'
 import './ActionButtonTest'
-import './ContentEditorTest'
+import './SdContentEditorTest'
 import './UserTable'
 # import './Files'
