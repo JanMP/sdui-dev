@@ -6,7 +6,7 @@ module.exports = {
   content: [
     './imports/ui/**/*.{js,jsx,ts,tsx,coffee}',
     './public/*.html',
-    '../meteor-packages/sdui/**/*.{js,jsx,ts,tsx,coffee}'
+    // '../meteor-packages/sdui/**/*.{js,jsx,ts,tsx,coffee}'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
