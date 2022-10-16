@@ -61,8 +61,8 @@ export TestLayout = ->
           <Route path="/custom-handle" element={<CustomHandleTest/>}/>
           <Route path="/query-editor" element={<QueryEditorTest/>}/>
           <Route path="/document-select" element={<SdDocumentSelectTest/>}/>
-          <Route path="/iframe" element={<IframeTest/>}/>
          {###
+          <Route path="/iframe" element={<IframeTest/>}/>
          ###}
         </Routes>
       </Fill>
