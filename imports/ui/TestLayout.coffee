@@ -14,7 +14,7 @@ import {LoginPage} from './LoginPage.coffee'
 import {CustomHandleTest} from './CustomHandleTest.coffee'
 import {QueryEditorTest} from './QueryEditorTest.coffee'
 import {SdDocumentSelectTest} from './SdDocumentSelectTest.coffee'
-import {IframeTest} from './IframeTest.coffee'
+# import {IframeTest} from './IframeTest.coffee'
 
 import {useCurrentUserIsInRole} from 'meteor/janmp:sdui'
 
@@ -25,7 +25,6 @@ Menu = ->
 
   <div className="p-2 shadow flex justify-around">
     
-    <Link to="/iframe">iframe</Link>
     <Link to="/button">button</Link>
     <Link to="/form">forms</Link>
     <Link to="/query-editor">query-editor</Link>
@@ -36,6 +35,7 @@ Menu = ->
     <div>{if canDo then '+' else '-'}</div>
     <Link to="/login-page">login</Link>
     {###
+    <Link to="/iframe">iframe</Link>
     <Link to="/document-select">document-select</Link>
     <Link to="/custom-handle">handle</Link>
     <Link to="/markdown">md</Link>
