@@ -4,7 +4,6 @@
   "scripts": {
     "start": "meteor run --exclude-archs web.browser.legacy --settings=settings.json",
     "run-ios-device": "meteor run ios-device --settings=settings.json --mobile-server MacBook-Pro-von-Jan-Michael.local:3000",
-    "start-tailwind": "npx tailwindcss -o ./imports/ui/styles/tailwind.css --watch",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha --port 3001",
     "visualize": "meteor --production --extra-packages bundle-visualizer --settings=settings.json"

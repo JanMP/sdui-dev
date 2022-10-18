@@ -190,7 +190,7 @@ button {
 }
 
 .modal {
-  @apply absolute p-4 border rounded-3xl shadow-xl bg-white focus:outline-transparent focus:ring-transparent w-10/12 sm:w-9/12 md:w-8/12 lg:w-6/12;
+  @apply absolute p-4 border rounded-xl shadow-xl bg-white focus:outline-transparent focus:ring-transparent w-10/12 sm:w-9/12 md:w-8/12 lg:w-6/12;
   min-width: 200px;
   top: 50%;
   left: 50%;
@@ -199,21 +199,4 @@ button {
 
 .overlay {
   @apply fixed inset-0 backdrop-blur backdrop-brightness-90;
-}
-
-.new-component {
-  @apply m-4 rounded bg-blue-100;
-}
-
-.bubble:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid white;
-  border-right: 10px solid transparent;
-  border-top: 10px solid white;
-  border-bottom: 10px solid transparent;
-  left: 19px;
-  bottom: -19px;
 }
