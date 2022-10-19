@@ -97,6 +97,13 @@ button
   .buttons-container
     @apply flex-shrink flex-grow text-right
 
+.default-list-item
+  @apply p-1 shadow flex justify-between cursor-pointer
+  &--selected
+    @apply bg-secondary-100
+  &--not-editable
+    @apply cursor-not-allowed
+
 .spaces-resize-handle
   @apply bg-secondary-300 hover:bg-secondary-400 text-secondary-300 hover:text-secondary-400 #{!important}
 
