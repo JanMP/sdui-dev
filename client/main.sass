@@ -104,6 +104,11 @@ button
   &--not-editable
     @apply cursor-not-allowed
 
+.query-editor
+  @apply overflow-visible
+  .header
+    @apply flex justify-between
+
 .spaces-resize-handle
   @apply bg-secondary-300 hover:bg-secondary-400 text-secondary-300 hover:text-secondary-400 #{!important}
 .pane-header
@@ -163,3 +168,7 @@ button
 .confirmation-modal
   .button-container
     @apply mt-4 flex justify-end
+
+.query-editor-modal
+  .button-container
+    @apply mb-4 flex justify-end
