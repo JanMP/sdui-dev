@@ -59,17 +59,19 @@ export QueryEditorTest = ->
   , [queryUiObject]
 
 
-  <Fill scrollable>
+  <Fill scrollable className="p-4">
     <QueryEditor
       rule={queryUiObject}
       bridge={bridge}
       showRule={true}
       onChange={setQueryUiObject}
     />
-    <div>
+    <div className="mt-4">
+      <div className="text-lg">queryUiObject:</div>
       <pre>{JSON.stringify queryUiObject, null, 2}</pre>
     </div>
-    <div>
+    <div className="mt-4">
+      <div className="text-lg">mongodb query:</div>
       <pre>{JSON.stringify query, null, 2}</pre>
     </div>
   </Fill>
