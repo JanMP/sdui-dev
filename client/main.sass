@@ -48,7 +48,7 @@ input
   &[type="submit" ]
     @apply bg-primary-500 text-white w-auto px-4 py-1 border-none disabled:opacity-50
   &[type="checkbox"]
-    @apply text-xl w-3
+    @apply text-xl w-5
 
 button
   @apply bg-secondary-400 text-white px-4 py-1 disabled:bg-opacity-50 rounded mx-1
@@ -108,6 +108,33 @@ button
   @apply overflow-visible
   .header
     @apply flex justify-between
+  .query-block
+    @apply overflow-visible mt-2 pt-3 pl-3 pb-2 pr-1 rounded
+    &--root
+      @apply pr-3
+    &--and
+      @apply bg-warning-200
+    &--or
+      @apply bg-ok-200
+    &--nor
+      @apply bg-danger-200
+    &--context
+      @apply bg-secondary-200
+    .child-container
+      @apply pl-2
+      .sentence
+        @apply overflow-visible flex justify-between mt-2 rounded bg-white/75
+        &__form
+          @apply flex w-full
+          .subject
+            @apply flex-grow
+          .predicate
+            @apply w-[7rem] shrink-0
+          .object
+            @apply flex-grow flex-shrink-0 -m-2
+            input
+              @apply h-[40px]
+
 
 .spaces-resize-handle
   @apply bg-secondary-300 hover:bg-secondary-400 text-secondary-300 hover:text-secondary-400 #{!important}
@@ -157,13 +184,13 @@ button
   @apply bg-danger-500 text-white p-4
 
 .modal
-  @apply absolute p-4 border rounded-xl shadow-xl bg-white focus:outline-transparent focus:ring-transparent w-10/12 sm:w-9/12 md:w-8/12 lg:w-6/12
+  @apply absolute p-4 border rounded-xl shadow-secondary-600 shadow-2xl bg-white focus:outline-transparent focus:ring-transparent w-10/12 sm:w-9/12 md:w-8/12 lg:w-6/12
   min-width: 200px
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
 .overlay
-  @apply fixed inset-0 backdrop-blur backdrop-brightness-90
+  @apply fixed inset-0 backdrop-brightness-90
 
 .confirmation-modal
   .button-container
