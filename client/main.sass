@@ -85,7 +85,7 @@ button
       @apply flex-grow basis-[9rem] min-w-[9rem]
       .sort-select
         &__container
-          @apply border rounded border-gray-300 bg-white text-gray-800 w-full disabled:opacity-50
+          @apply border rounded border-gray-300 bg-white text-gray-800 w-full disabled:opacity-50 pr-2
         &__control, &__input
           @apply border-0 focus:border-0 #{!important}
       .search-input
@@ -127,13 +127,14 @@ button
         &__form
           @apply flex w-full
           .subject
-            @apply flex-grow
+            @apply p-2 flex-grow
           .predicate
-            @apply w-[7rem] shrink-0
+            @apply p-2 w-[7rem] shrink-0
           .object
             @apply flex-grow flex-shrink-0 -m-2
-            input
-              @apply h-[40px]
+            .dynamic-field
+              input
+                @apply h-[38px]
 
 
 .spaces-resize-handle
@@ -184,7 +185,7 @@ button
   @apply bg-danger-500 text-white p-4
 
 .modal
-  @apply absolute p-4 border rounded-xl shadow-secondary-600 shadow-2xl bg-white focus:outline-transparent focus:ring-transparent w-10/12 sm:w-9/12 md:w-8/12 lg:w-6/12
+  @apply absolute p-4 border rounded-xl shadow-secondary-600 shadow-2xl bg-white focus:outline-transparent focus:ring-transparent w-full sm:w-10/12 md:w-9/12 lg:w-8/12
   min-width: 200px
   top: 50%
   left: 50%
