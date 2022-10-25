@@ -48,7 +48,7 @@ input
   &[type="submit" ]
     @apply bg-primary-500 text-white w-auto px-4 py-1 border-none disabled:opacity-50
   &[type="checkbox"]
-    @apply text-xl w-5
+    @apply w-5
 
 button
   @apply bg-secondary-400 text-white px-4 py-1 disabled:bg-opacity-50 rounded mx-1
@@ -188,11 +188,14 @@ button
   @apply bg-danger-500 text-white p-4
 
 .modal
-  @apply absolute p-4 border rounded-xl shadow-secondary-600 shadow-2xl bg-white focus:outline-transparent focus:ring-transparent w-full sm:w-10/12 md:w-9/12 lg:w-8/12
+  @apply absolute p-4 border rounded-xl shadow-secondary-600 shadow-2xl bg-white focus:outline-transparent focus:ring-transparent max-h-full sm:max-h-[96%] w-full sm:w-10/12 md:w-9/12 lg:w-8/12 overflow-y-auto
   min-width: 200px
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
+  .button-container
+    @apply flex justify-end
+
 .overlay
   @apply fixed inset-0 backdrop-brightness-90
 
