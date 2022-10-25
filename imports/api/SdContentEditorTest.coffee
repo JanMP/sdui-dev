@@ -23,10 +23,10 @@ if Meteor.isServer
         """
 
 schemaDefinition =
-  _id:
-    type: String
-    optional: true
-    uniforms: -> null
+  # _id:
+  #   type: String
+  #   optional: true
+  #   uniforms: -> null
   title:
     type: String
   description:

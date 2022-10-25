@@ -20,10 +20,10 @@ if Meteor.isServer
         bool: _.sample [true, false]
 
 schemaDefinition =
-  _id:
-    type: String
-    optional: true
-    uniforms: -> null
+  # _id:
+  #   type: String
+  #   optional: true
+  #   uniforms: -> null
   name: String
   a:
     type: Number
