@@ -27,10 +27,6 @@ if Meteor.isServer
 
 
 schemaDefinition =
-  # _id:
-  #   type: String
-  #   optional: true
-  #   uniforms: -> null
   name: String
   a:
     type: Number
@@ -72,7 +68,7 @@ listSchema = new SimpleSchema  schemaDefinition #_.omit schemaDefinition, ['obje
 
 getPreSelectPipeline = -> [
     $match:
-      a: $lt: 9
+      a: $lt: 30
       b: $lt: 100
   ]
 
