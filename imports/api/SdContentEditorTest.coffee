@@ -51,4 +51,5 @@ export dataOptions = createTableDataAPI
   canDelete: true
   canSearch: true
   canExport: true
+  showRowCount: true
 

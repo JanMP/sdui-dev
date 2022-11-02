@@ -38,7 +38,7 @@
     "preserveSymlinks": true
   },
   "exclude": [
-    "./.meteor/**" ,
+    // "./.meteor/**" ,
     "./packages/**",
     "./scaffolder/**"
   ]
