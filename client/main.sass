@@ -73,30 +73,45 @@ button
     &.warning
       @apply text-warning-600 disabled:bg-opacity-50
 
+// .2-rows
+//   @apply bg-red-100
+//   .buttons-container
+//     @apply order-2 w-1/2
 .default-header
-  @apply flex justify-between flex-wrap gap-2
+  @apply z-10 flex justify-between flex-wrap gap-2
   @apply p-2 border-b-2 border-secondary-200
   .row-count
-    @apply flex-grow
+    @apply flex-grow order-1
     &--no-data
       @apply h-0
   .middle-container
-    @apply flex-grow flex-shrink flex-wrap max-w-[40rem] flex justify-between gap-2
+    @apply order-3 max-w-[40rem]
+    @apply flex flex-grow flex-wrap justify-between gap-2 
     .sort-container, .search-container
-      @apply flex-grow min-w-[9rem]
-      .sort-select
-        &__container
-          @apply border rounded border-gray-300 bg-white text-gray-800 w-full disabled:opacity-50 pr-2
-        &__control, &__input
-          @apply border-0 focus:border-0 #{!important}
-      .search-input
-        @apply h-[40px] #{!important}
-        &--warn
-          @apply text-warning-600 #{!important}
-    .query-editor-toggle
-       @apply icon secondary
+      @apply flex-1 min-w-[9rem]
+  &.four-rows
+    .middle-container
+      @apply flex-col
+      .query-editor-toggle-container
+        @apply w-full flex justify-end
   .buttons-container
-    @apply flex-shrink flex-grow text-right
+    @apply order-4
+    @apply flex-grow text-right
+  &.two-rows, &.four-rows
+    .buttons-container
+      @apply order-2 w-3/4
+  .sort-select
+    &__container
+      @apply border rounded border-gray-300 bg-white text-gray-800 w-full disabled:opacity-50 pr-2
+    &__control, &__input
+      @apply border-0 focus:border-0 #{!important}
+  .search-input
+    @apply h-[40px] #{!important}
+    &--warn
+      @apply text-warning-600 #{!important}
+  .query-editor-toggle
+      @apply icon secondary
+
 
 .default-list-item
   @apply flex justify-between
