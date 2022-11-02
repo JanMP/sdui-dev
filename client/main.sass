@@ -46,7 +46,7 @@ input + label
 input
   @apply border border-gray-300 p-1 rounded w-full disabled:opacity-50
   &[type="submit" ]
-    @apply bg-primary-500 text-white w-auto px-4 py-1 border-none disabled:opacity-50
+    @apply w-auto bg-primary-500 text-white px-4 py-1 border-none disabled:opacity-50
   &[type="checkbox"]
     @apply w-5
 
@@ -74,15 +74,16 @@ button
       @apply text-warning-600 disabled:bg-opacity-50
 
 .default-header
-  @apply flex justify-between p-2 border-b-2 border-secondary-200 flex-wrap gap-2
+  @apply flex justify-between flex-wrap gap-2
+  @apply p-2 border-b-2 border-secondary-200
   .row-count
     @apply flex-grow
     &--no-data
-      @apply h-0 basis-0
+      @apply h-0
   .middle-container
-    @apply flex-grow flex-shrink max-w-[40rem] flex-wrap flex justify-between gap-2
+    @apply flex-grow flex-shrink flex-wrap max-w-[40rem] flex justify-between gap-2
     .sort-container, .search-container
-      @apply flex-grow basis-[9rem] min-w-[9rem]
+      @apply flex-grow min-w-[9rem]
       .sort-select
         &__container
           @apply border rounded border-gray-300 bg-white text-gray-800 w-full disabled:opacity-50 pr-2
@@ -98,7 +99,8 @@ button
     @apply flex-shrink flex-grow text-right
 
 .default-list-item
-  @apply p-1 shadow flex justify-between cursor-pointer
+  @apply flex justify-between
+  @apply p-1 shadow cursor-pointer
   &--selected
     @apply bg-secondary-100
   &--not-editable
@@ -188,7 +190,8 @@ button
   @apply bg-danger-500 text-white p-4
 
 .modal
-  @apply absolute p-4 border rounded-xl shadow-secondary-600 shadow-2xl bg-white focus:outline-transparent focus:ring-transparent max-h-full sm:max-h-[96%] w-full sm:w-10/12 md:w-9/12 lg:w-8/12 overflow-y-auto
+  @apply absolute max-h-full sm:max-h-[96%] w-full sm:w-10/12 md:w-9/12 lg:w-8/12 overflow-y-auto
+  @apply p-4 border rounded-xl shadow-secondary-600 shadow-2xl bg-white focus:outline-transparent focus:ring-transparent
   min-width: 200px
   top: 50%
   left: 50%
