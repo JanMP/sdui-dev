@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '{}/imports/ui/styles/Calendar.scss';
+@import '{}/imports/ui/styles/Clock.scss';
 @import '{}/imports/ui/styles/DatePicker.scss';
 @import '{}/imports/ui/styles/DateTimePicker.scss';
-@import '{}/imports/ui/styles/TimePicker.scss';
+
 
 * {
   @apply focus:ring-transparent #{!important};

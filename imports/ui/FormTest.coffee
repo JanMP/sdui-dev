@@ -12,23 +12,23 @@ Option = (props) ->
   </div>
 
 schema = new SimpleSchema
-  select:
-    type: String
-    allowedValues: allowedValues
-    uniforms:
-      components: {Option}
-  multiSelect:
-    label: 'Multiple selections with react-functional-select'
-    type: Array
-    uniforms:
-      checkboxes: false
-  'multiSelect.$':
-    type: String
-    allowedValues: allowedValues
-  string: String
-  number: Number
+  # select:
+  #   type: String
+  #   allowedValues: allowedValues
+  #   uniforms:
+  #     components: {Option}
+  # multiSelect:
+  #   label: 'Multiple selections with react-select'
+  #   type: Array
+  #   uniforms:
+  #     checkboxes: false
+  # 'multiSelect.$':
+  #   type: String
+  #   allowedValues: allowedValues
+  # string: String
+  # number: Number
   date: Date
-  bool: Boolean
+  # bool: Boolean
   hobbies:
     type: Array
   'hobbies.$':

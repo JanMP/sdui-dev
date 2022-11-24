@@ -25,12 +25,14 @@ resources =
       "Multiple selections with react-functional-select": "Mehrfach-Auswahl mit react-select"
       "Bool": "Boolsche Variable"
       "Hobbies": "Freizeitbeschäftigungen"
+      "Date": "Datum"
 
 export default ->
   i18n
+    # .use LanguageDetector
     .use initReactI18next
-    .use LanguageDetector
     .init {
+      lng: 'de'
       fallbackLng: 'en'
       resources,
       interpolation: escapeValue: false
