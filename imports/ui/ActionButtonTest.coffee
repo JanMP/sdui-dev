@@ -1,6 +1,7 @@
 import React from 'react'
 import {ActionButton} from 'meteor/janmp:sdui'
 import {faVial} from '@fortawesome/free-solid-svg-icons/faVial'
+import {useTranslation} from 'react-i18next'
 
 
 delay = (ms) -> new Promise (resolve) -> setTimeout resolve, ms
@@ -10,19 +11,21 @@ delayedFail = -> delay(2000).then -> throw new Error "WRONG!"
 
 export ActionButtonTest = ->
 
+  {t} = useTranslation()
+
   <div className="m-8 flex gap-4 items-center">
     <ActionButton
       method="ActionButtonTest.logTestString"
       data={{testString:"test-string from ActionButton"}}
-      confirmation="Do you really want to do this?"
-      label="log test-string"
+      confirmation={t "Do you really want to do this?"}
+      label={t "test"}
       icon={faVial}
       className="primary"
-      successMsg="Success, Check both client and server logs"
+      successMsg={t "Success, Check both client and server logs"}
     />
     <ActionButton
       onAction={delayedWin}
-      label="delayed Win"
+      label={t "delayed Win"}
       icon={faVial}
       className="ok"
       successMsg="Yeah baby, yeah!"

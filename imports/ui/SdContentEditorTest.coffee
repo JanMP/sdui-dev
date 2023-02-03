@@ -1,6 +1,6 @@
 import React from 'react'
 import {SdContentEditor} from 'meteor/janmp:sdui'
-import {dataOptions} from '/imports/api/ContentEditorTest.coffee'
+import {dataOptions} from '/imports/api/SdContentEditorTest.coffee'
 
 
 ListItemContent = ({rowData}) ->
@@ -11,7 +11,7 @@ ListItemContent = ({rowData}) ->
   </div>
 
 
-export ContentEditorTest = ->
+export SdContentEditorTest = ->
   <SdContentEditor
     dataOptions={dataOptions}
     customComponents={{ListItemContent}}

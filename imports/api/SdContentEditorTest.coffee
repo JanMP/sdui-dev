@@ -23,10 +23,6 @@ if Meteor.isServer
         """
 
 schemaDefinition =
-  _id:
-    type: String
-    optional: true
-    uniforms: -> null
   title:
     type: String
   description:
@@ -55,4 +51,5 @@ export dataOptions = createTableDataAPI
   canDelete: true
   canSearch: true
   canExport: true
+  showRowCount: true
 

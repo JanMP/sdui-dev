@@ -37,8 +37,11 @@
     "esModuleInterop": true,
     "preserveSymlinks": true
   },
+  "include": [
+    "**/*.d.ts",
+  ],
   "exclude": [
-    "./.meteor/**" ,
+    // "./.meteor/**" ,
     "./packages/**",
     "./scaffolder/**"
   ]

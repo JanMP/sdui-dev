@@ -1,7 +1,7 @@
 import {Meteor} from 'meteor/meteor'
 import {Mongo} from 'meteor/mongo'
 import SimpleSchema from 'simpl-schema'
-import {createTableDataAPI, currentUserIsInRole} from 'meteor/janmp:sdui'
+import {createTableDataAPI, currentUserIsInRole, LongTextField} from 'meteor/janmp:sdui'
 
 import _ from 'lodash'
 
@@ -18,20 +18,29 @@ if Meteor.isServer
         name: "Test #{n}"
         alignment: _.sample ['chaotic', 'neutral', 'lawful']
         bool: _.sample [true, false]
+        object:
+          string: "Some String #{_.random 1, 10}"
+          number: _.random 1, 100
+        objectArray:
+          [1..10].map ->
+            numberInObjectArray: _.random 1, 100
+
 
 schemaDefinition =
-  _id:
+  name:
     type: String
-    optional: true
-    uniforms: -> null
-  name: String
+    uniforms: LongTextField
   a:
     type: Number
     # min: 1
     # sdTable:
     #   editable: true
+    uniforms:
+      step: 1
   b:
     type: Number
+    uniforms:
+      step: 1
     # sdTable:
     #   editable: true
   sum:
@@ -47,15 +56,25 @@ schemaDefinition =
     type: Boolean
     sdTable:
       editable: true
+  object:
+    type: Object
+  'object.string': String
+  'object.number': Number
+  objectArray:
+    type: Array
+    label: 'Object-Array'
+    # uniforms: -> null
+  'objectArray.$': Object
+  'objectArray.$.numberInObjectArray': Number
   # _disableEditForRow: Boolean
   # _disableDeleteForRow: Boolean
 
 sourceSchema = new SimpleSchema _.omit schemaDefinition, ['sum']
-listSchema = new SimpleSchema schemaDefinition
+listSchema = new SimpleSchema  schemaDefinition #_.omit schemaDefinition, ['objectArray', 'objectArray.$','objectArray.$.numberInObjectArray']
 
 getPreSelectPipeline = -> [
     $match:
-      a: $lt: 9
+      a: $lt: 30
       b: $lt: 100
   ]
 

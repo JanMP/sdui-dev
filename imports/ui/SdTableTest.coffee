@@ -1,7 +1,7 @@
 import React from 'react'
 import {SdTable} from 'meteor/janmp:sdui'
-import {props} from '/imports/api/AutoTableTest.coffee'
+import {props} from '/imports/api/SdTableTest.coffee'
 
 
-export AutoTableTest = ->
+export SdTableTest = ->
   <SdTable dataOptions={props}/>
