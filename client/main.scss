@@ -166,21 +166,21 @@ button, .button {
     @apply flex justify-between;
   }
   .query-block {
-    @apply overflow-visible mt-2 pt-3 pl-3 pb-2 pr-1 rounded;
+    @apply overflow-visible mt-2 pt-3 pl-3 pb-2 pr-1 border-t-4 border-l-4;
     &--root {
       @apply pr-3;
     }
     &--and {
-      @apply bg-warning-200;
+      @apply border-warning-200;
     }
     &--or {
-      @apply bg-ok-200;
+      @apply border-ok-200;
     }
     &--nor {
-      @apply bg-danger-200;
+      @apply border-danger-200;
     }
     &--context {
-      @apply bg-secondary-200;
+      @apply border-secondary-200 bg-secondary-50;
     }
     .child-container {
       @apply pl-2;
@@ -203,6 +203,9 @@ button, .button {
             }
           }
         }
+      }
+      &--no-children {
+        @apply m-4 p-4 rounded border-2 border-secondary-200 text-secondary-500;
       }
     }
   }
@@ -278,27 +281,43 @@ button, .button {
   @apply bg-danger-500 text-white p-4;
 }
 .modal {
-  @apply absolute max-h-full sm:max-h-[96%] w-full sm:w-10/12 md:w-9/12 lg:w-8/12 overflow-y-auto;
-  @apply p-4 border rounded-3xl shadow-secondary-600 shadow-xl bg-white focus:outline-transparent focus:ring-transparent;
+  @apply absolute max-h-full sm:max-h-[96%] w-full sm:w-10/12 md:w-9/12 lg:w-8/12;
+  @apply border rounded-lg shadow-secondary-500 shadow-lg bg-white focus:outline-transparent focus:ring-transparent;
   min-width: 200px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  .button-container {
+  & > .button-container {
+    @apply p-2 bg-white;
     @apply flex justify-end;
   }
 }
 .overlay {
-  @apply fixed inset-0 backdrop-brightness-90;
+  @apply fixed inset-0 backdrop-brightness-75;
 }
-.confirmation-modal {
+.modal.confirmation-modal {
+  @apply p-4;
   .button-container {
-    @apply mt-4 flex justify-end;
+    @apply p-0 mt-4 flex justify-end;
   }
 }
-.query-editor-modal {
-  @apply overflow-visible;
+.modal.query-editor-modal {
+  @apply p-4;
   .button-container {
-    @apply mb-4 flex justify-end;
+    @apply flex justify-end;
   }
+}
+
+.modal.form-modal {
+  @apply flex flex-col;
+}
+
+.managed-form {
+    @apply flex-shrink overflow-hidden flex flex-col;
+    .form-container {
+        @apply flex-shrink overflow-y-scroll p-4;
+    }
+    .button-container {
+        @apply flex-none bottom-0 bg-white p-4;
+    }
 }

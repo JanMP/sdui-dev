@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
 import {ManagedForm} from 'meteor/janmp:sdui'
-import {AutoForm} from 'meteor/janmp:sdui'
+import {CustomDateField} from './CustomDateField.coffee'
 
 allowedValues = [1..10].map (i) -> "Option #{i}"
 
@@ -12,35 +12,12 @@ Option = (props) ->
   </div>
 
 schema = new SimpleSchema
-  # select:
-  #   type: String
-  #   allowedValues: allowedValues
-  #   uniforms:
-  #     components: {Option}
-  # multiSelect:
-  #   label: 'Multiple selections with react-select'
-  #   type: Array
-  #   uniforms:
-  #     checkboxes: false
-  # 'multiSelect.$':
-  #   type: String
-  #   allowedValues: allowedValues
-  # string: String
-  # number: Number
-  date: Date
-  # bool: Boolean
-  hobbies:
-    type: Array
-  'hobbies.$':
-    type: Object
-  'hobbies.$.Name': String
-  'hobbies.$.Since': Date
+  date:
+    type: Date
+    uniforms: CustomDateField
 
-freshModel =
-  select: 'Option 1'
-  multiSelect: ['Option 1', 'Option 2']
-  hobbies: [
-  ]
+
+freshModel = {}
 
 schemaBridge = new SimpleSchema2Bridge schema
 
@@ -53,14 +30,12 @@ export FormTest = ->
     setModel d
   
   <div className="h-screen bg-gray-100 p-4 overflow-y-scroll">
-
-    <h1>Test</h1>
-    
     <div className="bg-white border shadow-xl border-gray-300 rounded my-4 p-4">
       <ManagedForm
         schemaBridge={schemaBridge}
         model={model}
         onSubmit={onSubmit}
+        showTimeSelect
       />
     </div>
 

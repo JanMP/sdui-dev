@@ -1,7 +1,7 @@
 import {Meteor} from 'meteor/meteor'
 import {Mongo} from 'meteor/mongo'
 import SimpleSchema from 'simpl-schema'
-import {createTableDataAPI, currentUserIsInRole} from 'meteor/janmp:sdui'
+import {createTableDataAPI, currentUserIsInRole, LongTextField} from 'meteor/janmp:sdui'
 
 import _ from 'lodash'
 
@@ -27,14 +27,20 @@ if Meteor.isServer
 
 
 schemaDefinition =
-  name: String
+  name:
+    type: String
+    uniforms: LongTextField
   a:
     type: Number
     # min: 1
     # sdTable:
     #   editable: true
+    uniforms:
+      step: 1
   b:
     type: Number
+    uniforms:
+      step: 1
     # sdTable:
     #   editable: true
   sum:
