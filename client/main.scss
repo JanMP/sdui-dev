@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '{}/imports/ui/styles/Calendar.scss';
-@import '{}/imports/ui/styles/Clock.scss';
-@import '{}/imports/ui/styles/DatePicker.scss';
-@import '{}/imports/ui/styles/DateTimePicker.scss';
+// @import '{}/imports/ui/styles/Calendar.scss';
+// @import '{}/imports/ui/styles/Clock.scss';
+// @import '{}/imports/ui/styles/DatePicker.scss';
+// @import '{}/imports/ui/styles/DateTimePicker.scss';
 
+@import '{}/node_modules/primeicons/primeicons.css';
+@import '{}/node_modules/primereact/resources/themes/nano/theme.css';
+@import '{}/node_modules/primereact/resources/primereact.min.css';
 
 * {
   @apply focus:ring-transparent #{!important};
@@ -32,33 +35,27 @@ form {
 .ReactVirtualized__Table__rowColumn form > div {
   @apply m-0 p-0 #{!important};
 }
-form > div {
-  @apply my-4;
-}
-//keep?
-form.grid > div {
-  @apply my-0 #{!important};
-}
+
 label {
   @apply text-sm font-light;
 }
-label + input,
-label + textarea {
-  @apply block;
-}
-input + label {
-  @apply ml-2 inline;
-}
-input {
-  @apply border border-gray-300 p-1 rounded w-full disabled:opacity-50;
-  &[type="submit"] {
-    @apply w-auto bg-primary-500 text-white px-4 py-1 border-none disabled:opacity-50;
-  }
-  &[type="checkbox"] {
-    @apply w-5;
-  }
-}
-button, .button {
+// label + input,
+// label + textarea {
+//   @apply block;
+// }
+// input + label {
+//   @apply ml-2 inline;
+// }
+// input {
+//   @apply border border-gray-300 p-1 rounded w-full disabled:opacity-50;
+//   &[type="submit"] {
+//     @apply w-auto bg-primary-500 text-white px-4 py-1 border-none disabled:opacity-50;
+//   }
+//   &[type="checkbox"] {
+//     @apply border-none w-5;
+//   }
+// }
+button:not(:where(.p-button)) {
   @apply bg-secondary-400 text-white px-4 py-1 disabled:bg-opacity-50 rounded mx-1;
   &.primary {
     @apply bg-primary-500 text-white disabled:bg-opacity-50;
@@ -87,12 +84,7 @@ button, .button {
       @apply text-ok-600 disabled:bg-opacity-50;
     }
     &.warning {
-      @apply text-warning-600 disabled:bg-opacity-50;
-
-// .2-rows
-//   @apply bg-red-100
-//   .buttons-container
-//     @apply order-2 w-1/2
+//       @apply text-warning-600 disabled:bg-opacity-50;
     }
   }
 }
@@ -146,9 +138,9 @@ button, .button {
       @apply text-warning-600 #{!important};
     }
   }
-  .query-editor-toggle {
-    @apply icon secondary;
-  }
+//   .query-editor-toggle {
+//     @apply icon secondary;
+//   }
 }
 .default-list-item {
   @apply flex justify-between;
@@ -224,14 +216,14 @@ button, .button {
 .u-nested {
   @apply border border-gray-100 rounded p-2 m-2;
 }
-.u-show-error {
-  input {
-    @apply border border-danger-400 bg-danger-100 #{!important};
-  }
-  label {
-    @apply text-danger-600;
-  }
-}
+// .u-show-error {
+//   input {
+//     @apply border border-danger-400 bg-danger-100 #{!important};
+//   }
+//   label {
+//     @apply text-danger-600;
+//   }
+// }
 .u-error-list {
   @apply p-2 bg-danger-300 text-white w-full;
 }
@@ -256,6 +248,31 @@ button, .button {
 }
 .u-input-field {
   @apply flex flex-col-reverse;
+}
+
+.u-form-field {
+  @apply flex flex-col my-4;
+  &:has(.p-float-label) {
+    @apply py-4;
+  }
+  .radio-button-field {
+      @apply flex items-center;
+      label {
+          @apply ml-2 text-base;
+      }
+  }
+  .inline-right {
+    @apply flex items-center gap-2;
+  }
+  .inline-left {
+    @apply flex items-center gap-2;
+    & > label {
+      @apply text-right w-[10rem];
+    }
+  }
+  .inline-top {
+    @apply flex flex-col;
+  }
 }
 .Toastify__toast {
   button {
