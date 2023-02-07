@@ -1,3 +1,4 @@
+import './validationMessages'
 import './SdTableTest'
 import './ActionButtonTest'
 import './SdContentEditorTest'
