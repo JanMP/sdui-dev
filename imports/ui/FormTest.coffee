@@ -1,21 +1,28 @@
 import React, {useState} from 'react'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
-import {ManagedForm} from 'meteor/janmp:sdui'
-import {CustomDateField} from './CustomDateField.coffee'
+import {ManagedForm, LongTextField} from 'meteor/janmp:sdui'
 
-allowedValues = [1..10].map (i) -> "Option #{i}"
-
-Option = (props) ->
-  <div>
-    <pre>{JSON.stringify props.data, null, 2}</pre>
-  </div>
 
 schema = new SimpleSchema
-  date:
+  Select:
+    type: String
+    allowedValues: ['left', 'center', 'right']
+    defaultValue: 'center'
+  Zeichenkette:
+    type: String
+  Bool:
+    type: Boolean
+    defaultValue: true
+  ArrayOfObjects:
+    type: Array
+    min: 1
+  'ArrayOfObjects.$':
+    type: Object
+  'ArrayOfObjects.$.Name':
+    type: String
+  'ArrayOfObjects.$.DateStarted':
     type: Date
-    uniforms: CustomDateField
-
 
 freshModel = {}
 

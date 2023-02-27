@@ -11,14 +11,13 @@ import '/imports/ui/styles/sdTable.sass'
 
 import setupI18n from '/imports/i18n-setup.coffee'
 
-# import {config} from 'meteor/janmp:sdui'
-# import {dataOptions as fileDataOptions} from '/imports/api/Files.coffee'
+import {config} from 'meteor/janmp:sdui'
 
 import App from '/imports/ui/App'
 
 
 Meteor.startup ->
-  # config files: fileDataOptions
+  config locale: 'de'
   setupI18n()
   render <App />, document.getElementById 'react-target'
 

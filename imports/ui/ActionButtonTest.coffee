@@ -1,6 +1,5 @@
 import React from 'react'
 import {ActionButton} from 'meteor/janmp:sdui'
-import {faVial} from '@fortawesome/free-solid-svg-icons/faVial'
 import {useTranslation} from 'react-i18next'
 
 
@@ -19,27 +18,27 @@ export ActionButtonTest = ->
       data={{testString:"test-string from ActionButton"}}
       confirmation={t "Do you really want to do this?"}
       label={t "test"}
-      icon={faVial}
-      className="primary"
+      icon="pi pi-apple"
+      className="p-button-secondary"
       successMsg={t "Success, Check both client and server logs"}
     />
     <ActionButton
       onAction={delayedWin}
       label={t "delayed Win"}
-      icon={faVial}
-      className="ok"
+      icon="pi pi-apple"
+      className="p-button-warning p-button-raised"
       successMsg="Yeah baby, yeah!"
     />
     <ActionButton
       onAction={delayedFail}
       label="delayed Fail"
-      icon={faVial}
+      icon="pi pi-apple"
       className="bg-pink-300 w-[8rem] h-[8rem] rounded-full text-2xl text-green-200 hover:text-green-600"
       errorMsg="This did not work..."
     />
      <ActionButton
       onAction={delayedWin}
-      icon={faVial}
+      icon="pi pi-apple"
       className="icon !text-red-500 text-3xl animate-pulse mx-6"
     />
      <ActionButton

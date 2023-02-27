@@ -14,44 +14,56 @@ import {LoginPage} from './LoginPage.coffee'
 import {CustomHandleTest} from './CustomHandleTest.coffee'
 import {QueryEditorTest} from './QueryEditorTest.coffee'
 import {SdDocumentSelectTest} from './SdDocumentSelectTest.coffee'
-import {IframeTest} from './IframeTest.coffee'
-
+import {MultiSelectTest} from './MultiSelectTest.coffee'
 import {useCurrentUserIsInRole} from 'meteor/janmp:sdui'
+import {TabMenu} from 'primereact/tabmenu'
 
-import {BrowserRouter as Router, Routes, Route, useParams, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, useLocation, useNavigate, Link} from 'react-router-dom'
 
 Menu = ->
   canDo = useCurrentUserIsInRole 'canEditRowsWithALessThan20'
+  navigate = useNavigate()
+  {pathname} = useLocation()
 
-  <div className="p-2 shadow flex justify-around">
-    
-    <Link to="/iframe">iframe</Link>
-    <Link to="/button">button</Link>
-    <Link to="/form">forms</Link>
-    <Link to="/query-editor">query-editor</Link>
-    <Link to="/content-editor">content</Link>
-    <Link to="/list">list</Link>
-    <Link to="/table">table</Link>
-    <Link to="/user-table">user-table</Link>
-    <div>{if canDo then '+' else '-'}</div>
-    <Link to="/login-page">login</Link>
-    {###
-    <Link to="/document-select">document-select</Link>
-    <Link to="/custom-handle">handle</Link>
-    <Link to="/markdown">md</Link>
-    ###}
-  </div>
+  menuItems = [
+    path: "/button", label: "button"
+  ,
+    path: "/form", label: "forms"
+  ,
+    path: "/multi-select-test", label: "multi-select"
+  ,
+    path: "/query-editor", label: "query-editor"
+  ,
+    path: "/content-editor", label: "content"
+  ,
+    path: "/list", label: "list"
+  ,
+    path: "/table", label: "table"
+  ,
+    path: "/user-table", label: "user-table"
+  ,
+    path: "/login-page", label: "login"
+  ]
+
+  activeIndex = menuItems.findIndex (item) -> item.path is pathname
+
+  <TabMenu
+    model={menuItems}
+    activeIndex={activeIndex}
+    onTabChange={(e) -> navigate(e.value.path)}
+  />
 
 
 export TestLayout = ->
 
   <Router>
     <ViewPort>
-      <Top size={45}><Menu/></Top>
+      <Top size={50}><Menu/></Top>
       <Fill>
         <Routes>
           <Route path="/content-editor" element={<SdContentEditorTest/>}/>
           <Route path="/form" element={<FormTest />}/>
+          <Route path="/multi-select-test" element={<MultiSelectTest/>}/>
           <Route path="/button" element={<ActionButtonTest/>}/>
           <Route path="/table" element={<SdTableTest/>}/>
           <Route path="/list" element={<SdListTest/>}/>
@@ -61,7 +73,6 @@ export TestLayout = ->
           <Route path="/custom-handle" element={<CustomHandleTest/>}/>
           <Route path="/query-editor" element={<QueryEditorTest/>}/>
           <Route path="/document-select" element={<SdDocumentSelectTest/>}/>
-          <Route path="/iframe" element={<IframeTest/>}/>
          {###
          ###}
         </Routes>
