@@ -22,7 +22,7 @@ export dataOptions = createUserTableAPI
 
 if Meteor.isServer
   Meteor.settings.seedUsers?.forEach ({email, password, roles}) ->
-    unless Meteor.users.findOne('emails.0.address': email)?
+    unless (await Meteor.users.findOneAsync('emails.0.address': email))?
       if (id = Accounts.createUser {email, password})?
         if Meteor.roleAssignment.find('user._id': id).count() is 0
           # roles.forEach (role) -> Roles.createRole role, unlessExists: true
