@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import SimpleSchema from 'simpl-schema'
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2'
 import {ManagedForm, LongTextField} from 'meteor/janmp:sdui'
+import {Button} from 'primereact/button'
 
 
 schema = new SimpleSchema
@@ -47,9 +48,10 @@ export FormTest = ->
     </div>
 
     <div className="bg-white border hover:shadow-lg border-gray-300 rounded p-4">
-      <button
-        className="bg-danger! text-white"
-        onClick={-> setModel freshModel}>reset model</button>
+      <Button
+        onClick={-> setModel freshModel}
+        label="Reset"
+      />
       <pre>{JSON.stringify model, null, 2}</pre>
     </div>
   </div>
