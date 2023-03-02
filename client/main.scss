@@ -255,37 +255,6 @@ label {
 .error-boundary {
   @apply bg-danger-500 text-white p-4;
 }
-.modal {
-  @apply absolute max-h-full sm:max-h-[96%] w-full sm:w-10/12 md:w-9/12 lg:w-8/12;
-  @apply border rounded-lg shadow-secondary-500 shadow-lg bg-white focus:outline-transparent focus:ring-transparent;
-  min-width: 200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  & > .button-container {
-    @apply p-2 bg-white;
-    @apply flex justify-end;
-  }
-}
-.overlay {
-  @apply fixed inset-0 backdrop-brightness-75;
-}
-.modal.confirmation-modal {
-  @apply p-4;
-  .button-container {
-    @apply p-0 mt-4 flex justify-end;
-  }
-}
-.modal.query-editor-modal {
-  @apply p-4;
-  .button-container {
-    @apply flex justify-end;
-  }
-}
-
-.modal.form-modal {
-  @apply flex flex-col;
-}
 
 .managed-form {
     @apply flex-shrink overflow-hidden flex flex-col gap-2;

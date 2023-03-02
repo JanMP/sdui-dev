@@ -10,20 +10,6 @@ schema = new SimpleSchema
     type: String
     allowedValues: ['left', 'center', 'right']
     defaultValue: 'center'
-  Zeichenkette:
-    type: String
-  Bool:
-    type: Boolean
-    defaultValue: true
-  ArrayOfObjects:
-    type: Array
-    min: 1
-  'ArrayOfObjects.$':
-    type: Object
-  'ArrayOfObjects.$.Name':
-    type: String
-  'ArrayOfObjects.$.DateStarted':
-    type: Date
 
 freshModel = {}
 
