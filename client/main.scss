@@ -262,7 +262,7 @@ label {
         @apply flex-shrink overflow-y-scroll p-2;
     }
     .button-container {
-        @apply p-dialog-footer;
+      @apply mb-4 px-4 flex justify-end gap-2;
     }
 }
 
